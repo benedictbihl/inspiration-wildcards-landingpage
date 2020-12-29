@@ -4,12 +4,42 @@
 @tailwind utilities;
 /* purgecss end ignore */
 
+.styled-navbar-link {
+  @apply text-typo-default p-4 relative font-light;
+}
+
+.styled-navbar-link:hover {
+  @apply text-typo-active font-semibold;
+}
+
+.styled-navbar-link-active {
+  @apply text-typo-active font-semibold;
+}
+
+.styled-navbar-link-active::after {
+  content: "";
+  height: 6px;
+  bottom: -2px;
+  @apply bg-accent absolute w-full left-0;
+}
+
+.styled-language-link {
+  @apply text-typo-default relative font-light uppercase px-1;
+}
+
+.styled-language-link:hover {
+  @apply text-typo-active;
+}
+
+.styled-language-link-active {
+  @apply text-typo-active font-semibold;
+}
 html,
 body {
-	padding: 0;
-	margin: 0;
-	font-size: 16px;
-	font-weight: 400;
-	font-family: 'Roboto', sans-serif;
-	color: #202020;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #202020;
 }

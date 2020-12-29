@@ -1,9 +1,16 @@
 {
-	"siteMeta": {
-		"title": "Title / EN"
-	},
-	"site": "Site",
-	"backTo": "Back to",
-	"helloWorld": "Hello world!",
-	"language": "Language"
+  "siteMeta": {
+    "titleIndex": "inspiration wild cards",
+    "descriptionIndex": "LOREM",
+    "titleHowTo": "how-to",
+    "descriptionHowTo": "LOREM",
+    "titleBuy": "buy the cards",
+    "descriptionBuy": "LOREM",
+    "titleImprint": "contact & imprint",
+    "descriptionImprint": "LOREM"
+  },
+  "site": "Site",
+  "backTo": "Back to",
+  "helloWorld": "Hello world!",
+  "language": "Language"
 }

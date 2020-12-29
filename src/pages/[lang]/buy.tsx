@@ -1,22 +1,17 @@
-import React from "react";
 import { NextPage, GetStaticPaths, GetStaticProps } from "next";
+import React from "react";
 import Layout from "../../components/Layout";
-import i18next from "i18next";
 import { getAllLanguageSlugs, getLanguage } from "../../lib/lang";
 
-interface ILangIndex {
+interface IBuyPage {
   language: string;
 }
-const Test: NextPage<ILangIndex> = ({ language }) => {
-  return (
-    <Layout title="schmiiii" description="schmaaa " language={language}>
-      <h1 className="mt-5 mb-5 font-bold text-4xl">test.js</h1>
-      <p>{i18next.t("helloWorld")}</p>
-    </Layout>
-  );
+
+const BuyPage: NextPage<IBuyPage> = ({ language }) => {
+  return <Layout language={language} title="" description="" />;
 };
 
-export default Test;
+export default BuyPage;
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const language = getLanguage(params.lang);

@@ -4,34 +4,23 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true
   },
-  purge: ["./components/**/*.{js,ts,jsx,tsx}", "./pages/**/*.{js,ts,jsx,tsx}"],
+  purge: false,
   theme: {
-    fontFamily: {
-      header: ["Varela Round"]
-    },
-    screens: {
-      sm: "48em",
-      md: "64em",
-      lg: "85.375em",
-      xl: "120em",
-      xxl: "160em"
-    },
+    // screens: {
+    //   sm: "48em",
+    //   md: "64em",
+    //   lg: "85.375em",
+    //   xl: "120em",
+    //   xxl: "160em"
+    // },
     extend: {
       colors: {
-        primary: {
-          lighter: "#EA93B8",
-          default: "#B76085",
-          dark: "#842D52"
-        },
-        secondary: {
-          lighter: "#FFE6F1",
-          default: "#FFE6F1",
-          dark: "#CCB3BE"
-        },
-        accent: {
-          lighter: "#FFFFE5",
-          default: "#FFF9B2",
-          dark: "#CCC67F"
+        primary:  "#E4E1DC",
+        secondary: "#B8B7B0",
+        accent:  "#232321",
+        typo: {
+          default: "#4F4F4B",
+          active: "#232321"
         }
       },
       spacing: {

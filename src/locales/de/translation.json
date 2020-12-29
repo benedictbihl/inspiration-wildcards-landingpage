@@ -1,9 +1,16 @@
 {
-	"siteMeta": {
-		"title": "Titel / DE"
-	},
-	"site": "Seite",
-	"backTo": "Zurück zu",
-	"helloWorld": "Hallo Welt!",
-	"language": "Sprache"
+  "siteMeta": {
+    "titleIndex": "Inspiration Wild Cards",
+    "descriptionIndex": "LOREM",
+    "titleHowTo": "Regeln",
+    "descriptionHowTo": "LOREM",
+    "titleBuy": "Kartenset kaufen",
+    "descriptionBuy": "LOREM",
+    "titleImprint": "Kontakt & Impressum",
+    "descriptionImprint": "LOREM"
+  },
+  "site": "Seite",
+  "backTo": "Zurück zu",
+  "helloWorld": "Hallo Welt!",
+  "language": "Sprache"
 }
