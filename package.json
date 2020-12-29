@@ -1,24 +1,39 @@
 {
-	"name": "nextjs-i18n-static-page-starter",
-	"version": "0.1.0",
-	"author": "Marcel Zurreck",
-	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start",
-		"export": "next build && next export"
-	},
-	"dependencies": {
-		"i18next": "^19.8.4",
-		"i18next-browser-languagedetector": "^6.0.1",
-		"next": "^10.0.0",
-		"postcss": "^8.1.7",
-		"react": "16.13.1",
-		"react-dom": "16.13.1"
-	},
-	"devDependencies": {
-		"@fullhuman/postcss-purgecss": "^3.0.0",
-		"autoprefixer": "^10.0.4",
-		"tailwindcss": "^2.0.1"
-	}
+  "name": "inspiration-wildcards-landingpage",
+  "version": "0.1.0",
+  "author": "Benedict Bihlmaier",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next build && next export",
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "dependencies": {
+    "i18next": "^19.8.4",
+    "i18next-browser-languagedetector": "^6.0.1",
+    "next": "^10.0.0",
+    "postcss": "^8.1.7",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "@typescript-eslint/eslint-plugin": "^4.4.0",
+    "@typescript-eslint/parser": "^4.4.0",
+    "babel-eslint": "^9.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.3",
+    "prettier": "^1.19.1",
+    "stylelint-config-recommended": "^3.0.0"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^3.0.0",
+    "@types/node": "^14.14.16",
+    "@types/react": "^17.0.0",
+    "autoprefixer": "^10.0.4",
+    "tailwindcss": "^2.0.1",
+    "typescript": "^4.1.3"
+  }
 }
