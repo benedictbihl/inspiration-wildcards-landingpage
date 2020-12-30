@@ -23,11 +23,13 @@ body {
 }
 
 .styled-navbar-link:hover {
-  @apply text-typo-active font-semibold;
+  text-shadow: 1px 0 0 #232321;
+  @apply text-typo-active;
 }
 
 .styled-navbar-link-active {
-  @apply text-typo-active font-semibold;
+  text-shadow: 1px 0 0 #232321;
+  @apply text-typo-active;
 }
 
 .styled-navbar-link-active::after {
@@ -35,6 +37,14 @@ body {
   height: 6px;
   bottom: -2px;
   @apply bg-accent absolute w-full left-0;
+}
+
+.styled-navbar-link-mobile {
+  @apply text-typo-default p-4 relative font-light text-2xl text-center;
+}
+
+.styled-navbar-link-mobile-active {
+  @apply text-typo-active font-semibold;
 }
 
 .styled-language-link {
@@ -47,6 +57,11 @@ body {
 
 .styled-language-link-active {
   @apply text-typo-active font-semibold;
+}
+
+.styled-burger-bar {
+  @apply w-8 h-1 bg-accent  transition-all duration-300 ease-linear relative;
+  transform-origin: 1px;
 }
 
 /*********************HOW TO PAGE*****************************************/

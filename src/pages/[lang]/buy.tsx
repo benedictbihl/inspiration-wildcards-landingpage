@@ -19,7 +19,7 @@ const BuyPage: NextPage<IBuyPage> = ({ language }) => {
         {/* <div className="w-1/3 flex justify-center">
           <div className="styled-buyBG-left w-full h-1/2 xxl:h-3/4"></div>
         </div> */}
-        <div className="w-11/12 mx-auto lg:w-2/3 flex items-center flex-col min-h-screen">
+        <div className="w-11/12 mx-auto md:w-2/3 flex items-center flex-col min-h-screen">
           <div className="pt-28">
             <h2 className="font-semibold text-3xl text-accent text-center pb-6">
               {i18next.t("buy.headline")}
@@ -27,8 +27,8 @@ const BuyPage: NextPage<IBuyPage> = ({ language }) => {
             <p className="text-lg pb-4 text-center">
               {i18next.t("buy.subheadline")}
             </p>
-            <div className="w-full flex flex-col lg:flex-row">
-              <div className="w-11/12 mx-auto lg:w-1/2">
+            <div className="w-full flex flex-col md:flex-row">
+              <div className="w-11/12 mx-auto md:w-1/2">
                 <p className="text-center font-semibold text-xl">english</p>
                 <img src="/img/CardsEN.png" alt="cards" />
                 <p className="text-xl text-center pb-8">
@@ -62,7 +62,7 @@ const BuyPage: NextPage<IBuyPage> = ({ language }) => {
                   </a>
                 </p>
               </div>
-              <div className="mt-8 lg:mt-0 w-11/12 mx-auto lg:w-1/2">
+              <div className="mt-8 md:mt-0 w-11/12 mx-auto md:w-1/2">
                 <p className="text-center font-semibold text-xl">deutsch</p>
                 <img src="/img/CardsDE.png" alt="cards" />
                 <p className="text-xl text-center pb-8">

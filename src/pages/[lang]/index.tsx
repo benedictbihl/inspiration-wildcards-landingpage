@@ -62,8 +62,8 @@ const LangIndex: NextPage<ILangIndex> = ({ language }) => {
       description={i18next.t("siteMeta.descriptionIndex")}
     >
       <section className="w-full flex flex-col items-center h-screen">
-        <div className="w-full h-full flex flex-col items-center justify-center lg:pt-36 lg:h-4/5 relative overflow-hidden">
-          <figure className="stack w-full mx-auto lg:w-1/4">
+        <div className="w-full flex flex-col items-center justify-center md:pt-36 h-4/5 relative overflow-hidden">
+          <figure className="stack w-11/12 mx-auto md:w-1/4">
             <div className="card one" ref={addToRefs}>
               <FlipCard
                 imageFront={`/img/cards/InspirationWildCard_${language}_100.png`}
@@ -97,22 +97,22 @@ const LangIndex: NextPage<ILangIndex> = ({ language }) => {
           </figure>
           <p
             style={{ left: "20px" }}
-            className="font-light mt-2 mx-auto w-10/12 lg:w-1/4 relative"
+            className="font-light mt-2 mx-auto w-10/12 md:w-1/4 relative"
           >
             {i18next.t("index.explanation")}
           </p>
         </div>
-        <div className="h-1/5 w-10/12 mx-auto lg:w-1/4 flex items-start justify-between">
+        <div className="h-1/5 w-10/12 mx-auto md:w-1/4 flex items-start justify-between">
           <Link prefetch={false} href={`/[lang]/buy`} as={`/${language}/buy`}>
             <button
               type="button"
-              className="text-lg xl:text-2xl font-light mt-8 px-8 py-1 border-2 border-accent rounded-full hover:text-accent"
+              className="text-base md:text-xl xl:text-2xl font-light mt-8 px-4 md:px-8 py-1 border-2 border-accent rounded-full hover:text-accent"
             >
               {i18next.t("index.buyBtn")}
             </button>
           </Link>
           <button
-            className="text-lg xl:text-2xl font-semibold text-primary mt-8 px-8 py-1 border-2 border-accent rounded-full bg-accent hover:text-secondary"
+            className="text-base md:text-xl xl:text-2xl font-semibold text-primary mt-8 px-4 md:px-8 py-1 border-2 border-accent rounded-full bg-accent hover:text-secondary"
             onClick={() =>
               cardOnTop === cardRefs.current.length - 1
                 ? setCardOnTop(0)

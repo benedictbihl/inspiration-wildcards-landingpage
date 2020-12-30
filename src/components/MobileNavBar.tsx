@@ -2,18 +2,24 @@ import React from "react";
 import Link from "next/link";
 import i18next from "i18next";
 
-interface INavBar {
+interface IMobileNavBar {
   language: string;
   pathname: string;
   className?: string;
 }
-const NavBar: React.FC<INavBar> = ({ language, pathname, className }) => {
+const MobileNavBar: React.FC<IMobileNavBar> = ({
+  language,
+  pathname,
+  className
+}) => {
   return (
-    <div className={`justify-center w-8/12 ${className}`}>
+    <div className={`justify-center w-8/12 z-50 ${className}`}>
       <Link prefetch={false} href={`/[lang]/howTo`} as={`/${language}/howTo`}>
         <a
-          className={`styled-navbar-link ${
-            pathname === "/[lang]/howTo" ? "styled-navbar-link-active" : ""
+          className={`styled-navbar-link-mobile ${
+            pathname === "/[lang]/howTo"
+              ? "styled-navbar-link-mobile-active"
+              : ""
           }`}
         >
           {i18next.t("siteMeta.titleHowTo")}
@@ -21,8 +27,8 @@ const NavBar: React.FC<INavBar> = ({ language, pathname, className }) => {
       </Link>
       <Link prefetch={false} href={`/[lang]`} as={`/${language}`}>
         <a
-          className={`styled-navbar-link ${
-            pathname === "/[lang]" ? "styled-navbar-link-active" : ""
+          className={`styled-navbar-link-mobile ${
+            pathname === "/[lang]" ? "styled-navbar-link-mobile-active" : ""
           }`}
         >
           {i18next.t("siteMeta.titleIndex")}
@@ -30,8 +36,8 @@ const NavBar: React.FC<INavBar> = ({ language, pathname, className }) => {
       </Link>
       <Link prefetch={false} href={`/[lang]/buy`} as={`/${language}/buy`}>
         <a
-          className={`styled-navbar-link ${
-            pathname === "/[lang]/buy" ? "styled-navbar-link-active" : ""
+          className={`styled-navbar-link-mobile ${
+            pathname === "/[lang]/buy" ? "styled-navbar-link-mobile-active" : ""
           }`}
         >
           {i18next.t("siteMeta.titleBuy")}
@@ -41,4 +47,4 @@ const NavBar: React.FC<INavBar> = ({ language, pathname, className }) => {
   );
 };
 
-export default NavBar;
+export default MobileNavBar;

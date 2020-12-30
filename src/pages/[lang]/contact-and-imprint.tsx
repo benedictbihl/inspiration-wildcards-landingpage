@@ -18,7 +18,7 @@ const ContactAndImprintPage: NextPage<IContactAndImprintPage> = ({
       description={i18next.t("siteMeta.descriptionImprint")}
     >
       <section className="flex justify-center min-h-screen">
-        <div className="pt-28 mx-auto w-11/12 lg:w-1/2">
+        <div className="pt-28 mx-auto w-11/12 md:w-1/2">
           <br></br>
           <h1 className="font-semibold text-xl text-center">Impressum</h1>
           <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>

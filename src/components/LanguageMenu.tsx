@@ -8,7 +8,7 @@ interface ILanguageMenu {
 
 const LanguageMenu: React.FC<ILanguageMenu> = ({ pathname }) => {
   return (
-    <div className="flex w-2/12 ml-8 py-4">
+    <div className="flex w-2/12 ml-4 py-2 md:ml-8 md:py-4 text-xl md:text-base z-40">
       <Link
         prefetch={false}
         href={pathname}

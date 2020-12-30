@@ -3,7 +3,7 @@ import i18next from "i18next";
 
 const Instructions: React.FC = () => {
   return (
-    <div className="styled-instructions pt-28">
+    <div className="styled-instructions pt-14 md:pt-28">
       <h3 className="font-semibold text-lg text-typo-active pb-4">
         {i18next.t("howTo.headline")}
       </h3>
