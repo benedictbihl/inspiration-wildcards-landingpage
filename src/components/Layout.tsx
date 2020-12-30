@@ -26,6 +26,17 @@ const Layout: React.FC<ILayout> = props => {
       </Head>
       <Header language={props.language} />
       <main>{props.children}</main>
+      <footer className="w-full bottom-0 flex justify-center py-6">
+        <p className="mx-auto text-center">
+          <span className="font-semibold text-secondary opacity-80">
+            no cookies used on this site |
+          </span>
+          <span className="text-accent"> ©2018-2020 Jens Mühlstedt | </span>
+          <a className="underline" href="mailto:info@inspirationwildcards.com">
+            contact via mail
+          </a>
+        </p>
+      </footer>
     </>
   );
 };

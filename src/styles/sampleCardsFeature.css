@@ -1,0 +1,101 @@
+/*********************FLIPCARD*****************************************/
+
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front img,
+.flip-card-back img {
+  height: 92%;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/*********************SHUFFLING ANIMATION*****************************************/
+
+.stack {
+  position: relative;
+  height: 100%;
+  top: 20px;
+  left: 20px;
+}
+.card {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: translateY(0);
+  animation: 1s ease 1 normal forwards;
+  transition: all 0.3s linear 0.5s;
+}
+.card.one {
+  left: 0;
+  top: 0;
+  z-index: 4;
+}
+.card.two {
+  left: 5px;
+  top: 5px;
+  z-index: 3;
+}
+.card.three {
+  left: 10px;
+  top: 10px;
+  z-index: 2;
+}
+
+.card.four {
+  left: 15px;
+  top: 15px;
+  z-index: 1;
+}
+
+.card.five {
+  left: 20px;
+  top: 20px;
+  z-index: 0;
+}
+.card span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes frontToBack {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-100%, -2em);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}

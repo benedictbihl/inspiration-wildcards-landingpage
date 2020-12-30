@@ -13,7 +13,7 @@ const Header: React.FC<IHeader> = ({ language }) => {
   const { pathname } = router;
 
   return (
-    <header className="flex justify-between bg-secondary w-full">
+    <header className="flex justify-between bg-secondary w-full fixed z-50">
       <LanguageMenu pathname={pathname} />
       <NavBar language={language} pathname={pathname} />
       <div className=" w-2/12 flex justify-end">

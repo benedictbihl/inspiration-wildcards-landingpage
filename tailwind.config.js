@@ -2,17 +2,22 @@
 module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true
+    purgeLayersByDefault: false
   },
+  // purge: [
+  //   "./components/**/*.{js,ts,jsx,tsx}",
+  //   "./pages/**/*.{js,ts,jsx,tsx}",
+  //   "./data/**/*.{js,ts,jsx,tsx}",
+  // ],
   purge: false,
   theme: {
-    // screens: {
-    //   sm: "48em",
-    //   md: "64em",
-    //   lg: "85.375em",
-    //   xl: "120em",
-    //   xxl: "160em"
-    // },
+    screens: {
+      sm: "48em",
+      md: "64em",
+      lg: "85.375em",
+      xl: "120em",
+      xxl: "160em"
+    },
     extend: {
       colors: {
         primary:  "#E4E1DC",

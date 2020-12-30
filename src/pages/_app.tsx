@@ -2,6 +2,7 @@
 
 import "../i18n/init";
 import "../styles/global.css";
+import "../styles/sampleCardsFeature.css";
 
 import i18next from "i18next";
 

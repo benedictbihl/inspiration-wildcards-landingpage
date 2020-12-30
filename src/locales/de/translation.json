@@ -6,11 +6,49 @@
     "descriptionHowTo": "LOREM",
     "titleBuy": "Kartenset kaufen",
     "descriptionBuy": "LOREM",
-    "titleImprint": "Kontakt & Impressum",
+    "titleImprint": "Impressum",
     "descriptionImprint": "LOREM"
   },
-  "site": "Seite",
-  "backTo": "Zurück zu",
-  "helloWorld": "Hallo Welt!",
-  "language": "Sprache"
+  "howTo": {
+    "headline": "HOW-TO",
+    "precondition": "Precondition: You or your group need new ideas.",
+    "step1": "Define the product, use case or feature you want to ideate on.",
+    "step2": "Sort out the cards which are not relevant, because they already apply to your problem.",
+    "step3": "Each participant gets a card.",
+    "step4": "Each participant takes 5 minutes to rethink the product based on the card. Write it down.",
+    "step5": "Discuss together (and/or dot vote) the ideas for the real product.",
+    "repeatUntilSuccess": "Repeat until you succeed.",
+    "FAQ": "FAQs",
+    "Question1": "In which languages are the cards available?",
+    "Answer1": "The cards are available in English and German language. ",
+    "Question2": "Which knowledge level does my team or I need to use the cards?",
+    "Answer2": "KEINE AHNUNG BRUDER",
+    "Question3": "Where can I get more information on the ideation process overall?",
+    "Answer3": "FRAG MAL DEN MICHAEL",
+    "Question4": "Can I get more than the 50 cards?",
+    "Answer4": "KOMMT DRAUF AN, WIE VIEL MULA DU DAFÜR HINLEGEN WILLST, COMPADRE"
+  },
+  "index": {
+    "buyBtn": "buy card set",
+    "nextBtn": "next card",
+    "explanation": "these are 5 sample cards. click or tap on a card to flip it."
+  },
+  "buy": {
+    "headline": "Buy the card set",
+    "subheadline": "Contains 50 wild cards (size: 118x182mm) that will inspire your next brainstorming!",
+    "isbn_EN": "ISBN 978-3-8325-5179-7",
+    "LOGOS_link_EN": "https://www.logos-verlag.de/cgi-bin/engbuchmid?isbn=5179&lng=deu&id=",
+    "LOGOS_EN": "the card set at Logos Verlag",
+    "AMZN_link_EN": "https://www.amazon.de/dp/3832551794/",
+    "AMZN_EN": "at amazon.de",
+    "GOOGLE_LINK_EN": "https://www.google.com/search?q=ISBN+978-3-8325-5179-7",
+    "GOOGLE_EN": "Google-Search for the ISBN",
+    "isbn_DE": "ISBN 978-3-8325-5178-0",
+    "LOGOS_link_DE": "https://www.logos-verlag.de/cgi-bin/engbuchmid?isbn=5178&lng=deu&id=",
+    "LOGOS_DE": "beim Logos Verlag",
+    "AMZN_link_DE": "https://www.amazon.de/dp/3832551786/",
+    "AMZN_DE": "bei amazon.de",
+    "GOOGLE_LINK_DE": "https://www.google.com/search?q=ISBN+978-3-8325-5178-0",
+    "GOOGLE_DE": "Google-Suche nach ISBN"
+  }
 }

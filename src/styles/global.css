@@ -1,8 +1,22 @@
-/* purgecss start ignore */
 @tailwind base;
+
+/* Write your own custom base styles here */
+
+/* Start purging... */
 @tailwind components;
-@tailwind utilities;
-/* purgecss end ignore */
+/* Stop purging. */
+
+/*********************GENERAL*****************************************/
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Source Sans Pro", sans-serif;
+  @apply bg-primary text-typo-default;
+}
 
 .styled-navbar-link {
   @apply text-typo-default p-4 relative font-light;
@@ -34,12 +48,53 @@
 .styled-language-link-active {
   @apply text-typo-active font-semibold;
 }
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-size: 16px;
-  font-weight: 400;
-  font-family: "Source Sans Pro", sans-serif;
-  color: #202020;
+
+/*********************HOW TO PAGE*****************************************/
+
+.styled-instructions ol li {
+  @apply pb-4;
 }
+
+.styled-howToBG-left {
+  background-image: url("../../public/img/howTo_BG_left@2x.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: center;
+  top: 9em;
+  position: relative;
+}
+
+.styled-howToBG-right {
+  background-image: url("../../public/img/howTo_BG_right@2x.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: center;
+  bottom: 4em;
+  position: relative;
+}
+
+/*********************BUY PAGE*****************************************/
+
+.styled-buyBG-left {
+  background-image: url("../../public/img/buy_BG_left.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: center;
+  top: 9em;
+  position: relative;
+}
+
+.styled-buyBG-right {
+  background-image: url("../../public/img/buy_BG_right.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: center;
+  bottom: 4em;
+  position: relative;
+}
+
+/* Start purging... */
+@tailwind utilities;
+/* Stop purging. */
+
+/* Your own custom utilities */
