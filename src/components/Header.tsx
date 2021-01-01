@@ -17,11 +17,6 @@ const Header: React.FC<IHeader> = ({ language }) => {
   const router = useRouter();
   const { pathname } = router;
 
-  useEffect(() => {
-    // Nice vibrating animation on mobile devices
-    navigator.vibrate(50);
-  }, [open]);
-
   return (
     <header className="flex justify-between bg-secondary w-full md:fixed relative z-50">
       <LanguageMenu pathname={pathname} />
@@ -45,12 +40,12 @@ const Header: React.FC<IHeader> = ({ language }) => {
           <div className=" w-1/2 flex justify-center mx-auto">
             <Link
               prefetch={false}
-              href={`/[lang]/contact-and-imprint`}
-              as={`/${language}/contact-and-imprint`}
+              href={`/[lang]/imprint`}
+              as={`/${language}/imprint`}
             >
               <a
                 className={`styled-navbar-link-mobile ${
-                  pathname === "/[lang]/contact-and-imprint"
+                  pathname === "/[lang]/imprint"
                     ? "styled-navbar-link-mobile-active"
                     : ""
                 }`}
@@ -69,14 +64,12 @@ const Header: React.FC<IHeader> = ({ language }) => {
       <div className=" w-2/12 md:flex hidden justify-end">
         <Link
           prefetch={false}
-          href={`/[lang]/contact-and-imprint`}
-          as={`/${language}/contact-and-imprint`}
+          href={`/[lang]/imprint`}
+          as={`/${language}/imprint`}
         >
           <a
             className={`mr-6 styled-navbar-link ${
-              pathname === "/[lang]/contact-and-imprint"
-                ? "styled-navbar-link-active"
-                : ""
+              pathname === "/[lang]/imprint" ? "styled-navbar-link-active" : ""
             }`}
           >
             {i18next.t("siteMeta.titleImprint")}

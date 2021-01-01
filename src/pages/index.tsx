@@ -10,7 +10,7 @@ export default function Home({ allLangsData }): null {
 
   useEffect(() => {
     const { pathname } = router;
-    if (pathname == "/") {
+    if (pathname === "/") {
       router.push("/" + i18next.language.substring(0, 2));
     }
   });
