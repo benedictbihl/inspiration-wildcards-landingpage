@@ -30,7 +30,7 @@ const BuyPage: NextPage<IBuyPage> = ({ language }) => {
             <div className="w-full flex flex-col md:flex-row">
               <div className="w-11/12 mx-auto md:w-1/2">
                 <p className="text-center font-semibold text-xl">english</p>
-                <img src="/img/CardsEN.png" alt="cards" />
+                <img src="/img/cards_EN.png" alt="cards" />
                 <p className="text-xl text-center pb-8">
                   {i18next.t("buy.isbn_EN")}
                 </p>
@@ -64,7 +64,7 @@ const BuyPage: NextPage<IBuyPage> = ({ language }) => {
               </div>
               <div className="mt-8 md:mt-0 w-11/12 mx-auto md:w-1/2">
                 <p className="text-center font-semibold text-xl">deutsch</p>
-                <img src="/img/CardsDE.png" alt="cards" />
+                <img src="/img/cards_DE.png" alt="cards" />
                 <p className="text-xl text-center pb-8">
                   {i18next.t("buy.isbn_DE")}
                 </p>
