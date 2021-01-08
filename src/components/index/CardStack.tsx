@@ -26,19 +26,16 @@ const CardStack: React.FC<ICardStack> = ({ language, cardOnTop }) => {
     let currentIndex = array.length,
       temporaryValue,
       randomIndex;
-
     // While there remain elements to shuffle...
     while (0 !== currentIndex) {
       // Pick a remaining element...
       randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex -= 1;
-
       // And swap it with the current element.
       temporaryValue = array[currentIndex];
       array[currentIndex] = array[randomIndex];
       array[randomIndex] = temporaryValue;
     }
-
     return array;
   }
 
@@ -47,12 +44,14 @@ const CardStack: React.FC<ICardStack> = ({ language, cardOnTop }) => {
    * sprinkle in the unavailable cards after every third card
    */
   const shuffledCards = useMemo(() => {
-    const content = shuffle(cards);
+    const content = JSON.parse(JSON.stringify(shuffle(cards)));
     content.unshift({
       imgBack: "001.png",
-      imgFront: "000.png"
+      imgFront: "000.png",
+      category: "",
+      number: 1
     });
-    const finalArr = content;
+    const finalArr = JSON.parse(JSON.stringify(content));
     let ctr = 0;
     content.map((card, index) => {
       if (index > 0 && index % 3 === 0) {
@@ -93,16 +92,16 @@ const CardStack: React.FC<ICardStack> = ({ language, cardOnTop }) => {
             currentPos === 0 ? maxShift + "px" : currentPos - 1 + "px";
         });
         cardRefs.current[cardOnTop].style.animationName = "frontToBack";
-        if (cards[cardOnTop + 1] === undefined) {
+        if (shuffledCards[cardOnTop + 1] === undefined) {
           setCardNumber("");
           setCardCategory(i18next.t("index.explanation"));
         } else {
-          setCardNumber(`card ${cards[cardOnTop + 1].number}/50`);
+          setCardNumber(`card ${shuffledCards[cardOnTop + 1].number}/50`);
           setCardCategory(
             //@ts-ignore
             i18next.t("index.category") +
               " " +
-              i18next.t(cards[cardOnTop + 1].category)
+              i18next.t(shuffledCards[cardOnTop + 1].category)
           );
         }
       }

@@ -39,8 +39,7 @@ const LangIndex: NextPage<ILangIndex> = ({ language }) => {
             <button
               className="text-base md:text-xl xl:text-2xl font-semibold text-primary  px-4 md:px-8 py-1 border-2 border-accent rounded-full bg-accent hover:text-secondary"
               onClick={() => {
-                console.log(cards.length);
-                cardOnTop === cards.length - 1
+                cardOnTop === cards.length + 3 //include the sprinkled in unavailable cards in CardStack.tsx
                   ? setCardOnTop(0)
                   : setCardOnTop(cardOnTop + 1);
               }}
