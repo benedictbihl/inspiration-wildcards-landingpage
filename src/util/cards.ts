@@ -18,12 +18,6 @@ export const cards = [
     number: 23
   },
   {
-    imgBack: "100na.png",
-    imgFront: "100na.png",
-    category: "index.cat_superforces",
-    number: 7
-  },
-  {
     imgBack: "102.png",
     imgFront: "100.png",
     category: "index.cat_superforces",
@@ -40,12 +34,6 @@ export const cards = [
     imgFront: "200.png",
     category: "index.cat_fictionlaws",
     number: 12
-  },
-  {
-    imgBack: "300na.png",
-    imgFront: "300na.png",
-    category: "index.cat_superheroes",
-    number: 29
   },
   {
     imgBack: "502.png",
@@ -67,12 +55,6 @@ export const cards = [
     number: 31
   },
   {
-    imgBack: "400na.png",
-    imgFront: "400na.png",
-    category: "index.cat_stereotypes",
-    number: 35
-  },
-  {
     imgBack: "501.png",
     imgFront: "500.png",
     category: "index.cat_nightmares",
@@ -82,12 +64,29 @@ export const cards = [
 
 export const cards_unavailable = [
   {
+    imgBack: "100na.png",
+    imgFront: "100na.png",
+    category: "index.cat_superforces",
+    number: 7
+  },
+  {
     imgBack: "200na.png",
     imgFront: "200na.png",
     category: "index.cat_fictionlaws",
     number: 17
   },
-
+  {
+    imgBack: "300na.png",
+    imgFront: "300na.png",
+    category: "index.cat_superheroes",
+    number: 29
+  },
+  {
+    imgBack: "400na.png",
+    imgFront: "400na.png",
+    category: "index.cat_stereotypes",
+    number: 35
+  },
   {
     imgBack: "500na.png",
     imgFront: "500na.png",
