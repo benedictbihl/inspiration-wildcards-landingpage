@@ -75,7 +75,7 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   background-position-x: center;
-  top: 9em;
+  top: 14em;
   position: relative;
 }
 
@@ -84,7 +84,8 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   background-position-x: center;
-  bottom: 4em;
+  background-position-y: bottom;
+  bottom: 6em;
   position: relative;
 }
 

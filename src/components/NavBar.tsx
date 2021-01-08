@@ -10,10 +10,10 @@ interface INavBar {
 const NavBar: React.FC<INavBar> = ({ language, pathname, className }) => {
   return (
     <div className={`justify-center w-8/12 ${className}`}>
-      <Link prefetch={false} href={`/[lang]/howTo`} as={`/${language}/howTo`}>
+      <Link prefetch={false} href={`/[lang]/about`} as={`/${language}/about`}>
         <a
           className={`styled-navbar-link ${
-            pathname === "/[lang]/howTo" ? "styled-navbar-link-active" : ""
+            pathname === "/[lang]/about" ? "styled-navbar-link-active" : ""
           }`}
         >
           {i18next.t("siteMeta.titleHowTo")}

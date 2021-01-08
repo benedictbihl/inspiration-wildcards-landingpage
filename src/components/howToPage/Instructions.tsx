@@ -3,9 +3,9 @@ import i18next from "i18next";
 
 const Instructions: React.FC = () => {
   return (
-    <div className="styled-instructions pt-14 md:pt-28">
+    <div className="styled-instructions">
       <h3 className="font-semibold text-lg text-typo-active pb-4">
-        {i18next.t("howTo.headline")}
+        {i18next.t("howTo.howTo")}
       </h3>
       <p className="font-light pb-4">{i18next.t("howTo.precondition")}</p>
       <ol className="font-semibold list-decimal list-inside">

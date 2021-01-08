@@ -14,10 +14,10 @@ const MobileNavBar: React.FC<IMobileNavBar> = ({
 }) => {
   return (
     <div className={`justify-center w-8/12 z-50 ${className}`}>
-      <Link prefetch={false} href={`/[lang]/howTo`} as={`/${language}/howTo`}>
+      <Link prefetch={false} href={`/[lang]/about`} as={`/${language}/about`}>
         <a
           className={`styled-navbar-link-mobile ${
-            pathname === "/[lang]/howTo"
+            pathname === "/[lang]/about"
               ? "styled-navbar-link-mobile-active"
               : ""
           }`}
