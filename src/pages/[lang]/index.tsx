@@ -25,7 +25,7 @@ const LangIndex: NextPage<ILangIndex> = ({ language }) => {
       description={i18next.t("siteMeta.descriptionIndex")}
     >
       <section className="w-full flex flex-col items-center h-screen">
-        <div className="w-11/12 h-screen">
+        <div className="w-11/12 h-screen flex flex-col justify-end">
           <DynamicCardstack language={language} cardOnTop={cardOnTop} />
           <div className="h-1/5 mx-auto flex items-start justify-between sm:mt-6 w-10/12 sm:w-1/2 lg:w-2/6 xl:w-1/4 ">
             <Link prefetch={false} href={`/[lang]/buy`} as={`/${language}/buy`}>

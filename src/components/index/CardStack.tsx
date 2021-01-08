@@ -9,6 +9,7 @@ interface ICardStack {
 }
 
 const CardStack: React.FC<ICardStack> = ({ language, cardOnTop }) => {
+  console.log(screen.availWidth);
   const initialRender = useRef(true);
   const cardRefs = useRef([]);
   cardRefs.current = [];
@@ -69,12 +70,6 @@ const CardStack: React.FC<ICardStack> = ({ language, cardOnTop }) => {
   useEffect(() => {
     if (initialRender.current) {
       initialRender.current = false;
-      cardRefs.current.map((card, index) => {
-        cardRefs.current[index].style.zIndex =
-          cardRefs.current.length - (index + 1);
-        cardRefs.current[index].style.top = 1 * index + "px";
-        cardRefs.current[index].style.left = 1 * index + "px";
-      });
     } else {
       if (cardRefs.current.length > 0) {
         cardRefs.current.map((card, index) => {
@@ -91,7 +86,8 @@ const CardStack: React.FC<ICardStack> = ({ language, cardOnTop }) => {
           card.style.top =
             currentPos === 0 ? maxShift + "px" : currentPos - 1 + "px";
         });
-        cardRefs.current[cardOnTop].style.animationName = "frontToBack";
+        cardRefs.current[cardOnTop].style.animationName =
+          screen.availWidth < 768 ? "frontToBackMobile" : "frontToBack";
         if (shuffledCards[cardOnTop + 1] === undefined) {
           setCardNumber("");
           setCardCategory(i18next.t("index.explanation"));
@@ -109,11 +105,23 @@ const CardStack: React.FC<ICardStack> = ({ language, cardOnTop }) => {
   }, [cardOnTop]);
 
   return (
-    <div className="w-full flex flex-col items-center justify-center md:pt-36 h-4/5 relative overflow-hidden">
+    <div
+      style={{ minHeight: "80%" }}
+      className="w-full flex flex-col items-center justify-center md:pt-36 h-4/5 relative overflow-hidden"
+    >
       <figure className="stack w-full mx-auto">
         {shuffledCards.map((card, index) => {
           return (
-            <div key={index} className="card" ref={addToRefs}>
+            <div
+              key={index}
+              className="card"
+              ref={addToRefs}
+              style={{
+                zIndex: shuffledCards.length - (index + 1),
+                top: 1 * index + "px",
+                left: 1 * index + "px"
+              }}
+            >
               <FlipCard
                 isFlippable={!card.imgBack.includes("na")}
                 wasFlipped={isFlipped => {
@@ -130,7 +138,7 @@ const CardStack: React.FC<ICardStack> = ({ language, cardOnTop }) => {
           );
         })}
       </figure>
-      <div className="font-light  flex justify-between w-10/12 sm:w-1/2 lg:w-2/6 xl:w-1/4">
+      <div className="font-light flex justify-between w-10/12 sm:w-1/2 lg:w-2/6 xl:w-1/4">
         <p className="">{cardCategory}</p>
         <p className="">{cardNumber}</p>
       </div>

@@ -115,19 +115,17 @@
   transform: translate(-50%, -50%);
 }
 
-@media (max-width: 64em) {
-  @keyframes frontToBack {
-    0% {
-      transform: translate(0, 0);
-    }
+@keyframes frontToBackMobile {
+  0% {
+    transform: translate(0, 0);
+  }
 
-    50% {
-      transform: translate(-100%, -2em);
-    }
+  50% {
+    transform: translate(-100%, -2em);
+  }
 
-    100% {
-      transform: translate(0, 0);
-    }
+  100% {
+    transform: translate(0, 0);
   }
 }
 
@@ -137,7 +135,7 @@
   }
 
   50% {
-    transform: translate(-30vw, -2em);
+    transform: translate(-25vw, -2em);
   }
 
   100% {

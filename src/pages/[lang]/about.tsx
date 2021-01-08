@@ -20,7 +20,7 @@ const HowToPage: NextPage<IHowToPage> = ({ language }) => {
     >
       <section className="flex w-full min-h-screen">
         <div className="flex flex-col items-center w-full">
-          <div className="md:h-screen flex flex-col items-center w-full">
+          <div className="md:min-h-screen flex flex-col items-center w-full">
             <h1 className="font-bold text-3xl text-accent w-11/12 md:w-1/3 xl:w-1/4 pb-4 pt-8 md:pt-28">
               {i18next.t("howTo.headline")}
             </h1>
