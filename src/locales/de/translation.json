@@ -31,7 +31,13 @@
   "index": {
     "buyBtn": "Karten kaufen",
     "nextBtn": "Nächste Karte",
-    "explanation": "Hier siehst du 5 Beispielkarten. Klicke/berühre zum drehen."
+    "category": "Kategorie: ",
+    "explanation": "Klicke oder berühre zum drehen",
+    "cat_superforces": "Superkräfte",
+    "cat_fictionlaws": "Andere Welten",
+    "cat_superheroes": "Superhelden",
+    "cat_stereotypes": "Stereotypen",
+    "cat_nightmares": "Albträume"
   },
   "buy": {
     "headline": "Die Karten kaufen",

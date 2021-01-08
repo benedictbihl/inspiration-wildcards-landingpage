@@ -31,7 +31,13 @@
   "index": {
     "buyBtn": "buy card set",
     "nextBtn": "next card",
-    "explanation": "these are 5 sample cards. click or tap on a card to flip it."
+    "category": "this is on of the 10",
+    "explanation": "click or tap to flip the card",
+    "cat_superforces": "super forces",
+    "cat_fictionlaws": "fiction laws",
+    "cat_superheroes": "super heroes",
+    "cat_stereotypes": "stereotypes",
+    "cat_nightmares": "nightmares"
   },
   "buy": {
     "headline": "Buy the card set",
