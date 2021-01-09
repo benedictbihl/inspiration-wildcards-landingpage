@@ -6,10 +6,11 @@ import { cards, cards_unavailable } from "../../util/cards";
 interface ICardStack {
   language: string;
   cardOnTop: number;
+  onLoad: () => void;
 }
 
-const CardStack: React.FC<ICardStack> = ({ language, cardOnTop }) => {
-  console.log(screen.availWidth);
+const CardStack: React.FC<ICardStack> = ({ language, cardOnTop, onLoad }) => {
+  const [cardWidth, setCardWidth] = useState(300);
   const initialRender = useRef(true);
   const cardRefs = useRef([]);
   cardRefs.current = [];
@@ -47,8 +48,8 @@ const CardStack: React.FC<ICardStack> = ({ language, cardOnTop }) => {
   const shuffledCards = useMemo(() => {
     const content = JSON.parse(JSON.stringify(shuffle(cards)));
     content.unshift({
-      imgBack: "001.png",
-      imgFront: "000.png",
+      imgBack: "000.png",
+      imgFront: "001.png",
       category: "",
       number: 1
     });
@@ -107,9 +108,18 @@ const CardStack: React.FC<ICardStack> = ({ language, cardOnTop }) => {
   return (
     <div
       style={{ minHeight: "500px" }}
-      className="w-full flex flex-col items-center justify-start md:pt-36 md:h-4/5 relative overflow-hidden"
+      className="w-full flex flex-col items-center justify-start pt-16 md:pt-28 md:h-4/5 relative overflow-hidden"
     >
-      <figure className="stack w-full mx-auto">
+      <figure
+        onLoad={() => {
+          onLoad();
+          setCardWidth(
+            document.getElementsByClassName("flip-card-front-img")[0]
+              .clientWidth
+          );
+        }}
+        className="stack w-full mx-auto"
+      >
         {shuffledCards.map((card, index) => {
           return (
             <div
@@ -138,7 +148,13 @@ const CardStack: React.FC<ICardStack> = ({ language, cardOnTop }) => {
           );
         })}
       </figure>
-      <div className="font-light flex justify-between w-10/12 sm:w-1/2 lg:w-2/6 xl:w-1/4">
+      <div
+        style={{
+          width: cardWidth + "px",
+          left: "10px"
+        }}
+        className="font-light relative flex justify-between w-10/12 sm:w-1/2 lg:w-2/6 xl:w-1/4"
+      >
         <p className="">{cardCategory}</p>
         <p className="">{cardNumber}</p>
       </div>

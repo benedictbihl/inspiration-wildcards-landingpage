@@ -13,7 +13,7 @@ const MobileNavBar: React.FC<IMobileNavBar> = ({
   className
 }) => {
   return (
-    <div className={`justify-center w-8/12 z-50 ${className}`}>
+    <div className={`justify-center w-11/12 z-50 ${className}`}>
       <Link prefetch={false} href={`/[lang]/about`} as={`/${language}/about`}>
         <a
           className={`styled-navbar-link-mobile ${

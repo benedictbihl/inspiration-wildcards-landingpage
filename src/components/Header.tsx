@@ -18,7 +18,7 @@ const Header: React.FC<IHeader> = ({ language }) => {
   const { pathname } = router;
 
   return (
-    <header className="flex justify-between bg-secondary w-full md:fixed relative z-50">
+    <header className="flex justify-between bg-secondary w-full absolute md:fixed z-50">
       <LanguageMenu pathname={pathname} />
       <div ref={node} className="md:hidden">
         <Burger
@@ -28,7 +28,7 @@ const Header: React.FC<IHeader> = ({ language }) => {
         />
         <nav
           aria-hidden={!open}
-          className={`flex flex-col justify-center bg-secondary h-screen text-center p-8 absolute top-0 right-0 transition-transform duration-700 ease-in-out w-full sm:w-2/3 sm:text-right ${
+          className={`flex flex-col justify-center bg-secondary h-screen text-center p-8 absolute top-0 right-0 transition-transform duration-700 ease-in-out w-full ${
             open ? "transform translate-y-0" : "transform -translate-y-full"
           }`}
         >
@@ -37,7 +37,7 @@ const Header: React.FC<IHeader> = ({ language }) => {
             pathname={pathname}
             className="flex flex-col w-1/2 mx-auto justify-center"
           />
-          <div className=" w-1/2 flex justify-center mx-auto">
+          <div className=" w-11/12 flex justify-center mx-auto">
             <Link
               prefetch={false}
               href={`/[lang]/imprint`}
@@ -61,7 +61,7 @@ const Header: React.FC<IHeader> = ({ language }) => {
         pathname={pathname}
         className="md:flex hidden"
       />
-      <div className=" w-2/12 md:flex hidden justify-end">
+      <div className=" w-2/12 md:flex hidden justify-end whitespace-nowrap">
         <Link
           prefetch={false}
           href={`/[lang]/imprint`}

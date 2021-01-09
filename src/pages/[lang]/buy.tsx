@@ -15,12 +15,12 @@ const BuyPage: NextPage<IBuyPage> = ({ language }) => {
       title={i18next.t("siteMeta.titleBuy")}
       description={i18next.t("siteMeta.descriptionBuy")}
     >
-      <section className="flex w-full justify-center ">
+      <section className="flex w-full justify-center text-lg">
         {/* <div className="w-1/3 flex justify-center">
           <div className="styled-buyBG-left w-full h-1/2 xxl:h-3/4"></div>
         </div> */}
         <div className="w-11/12 mx-auto md:w-2/3 flex items-center flex-col min-h-screen">
-          <div className="pt-8 md:pt-28">
+          <div className="pt-16 md:pt-28">
             <h2 className="font-semibold text-3xl text-accent text-center pb-6">
               {i18next.t("buy.headline")}
             </h2>
@@ -30,7 +30,7 @@ const BuyPage: NextPage<IBuyPage> = ({ language }) => {
             <div className="w-full flex flex-col md:flex-row">
               <div className="w-11/12 mx-auto md:w-1/2">
                 <p className="text-center font-semibold text-xl">english</p>
-                <img src="/img/cards_EN.png" alt="cards" />
+                <img className="mx-auto" src="/img/cards_EN.png" alt="cards" />
                 <p className="text-xl text-center pb-8">
                   {i18next.t("buy.isbn_EN")}
                 </p>
@@ -64,7 +64,7 @@ const BuyPage: NextPage<IBuyPage> = ({ language }) => {
               </div>
               <div className="mt-8 md:mt-0 w-11/12 mx-auto md:w-1/2">
                 <p className="text-center font-semibold text-xl">deutsch</p>
-                <img src="/img/cards_DE.png" alt="cards" />
+                <img className="mx-auto" src="/img/cards_DE.png" alt="cards" />
                 <p className="text-xl text-center pb-8">
                   {i18next.t("buy.isbn_DE")}
                 </p>

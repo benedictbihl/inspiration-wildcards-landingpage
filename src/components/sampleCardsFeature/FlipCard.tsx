@@ -50,7 +50,11 @@ const FlipCard: React.FC<IFlipCard> = ({
         style={setStyles()}
       >
         <div className="flip-card-front">
-          <img src={imageFront} alt="Card Front" />
+          <img
+            className="flip-card-front-img"
+            src={imageFront}
+            alt="Card Front"
+          />
         </div>
         <div className="flip-card-back">
           <img src={imageBack} alt="Card Back" />

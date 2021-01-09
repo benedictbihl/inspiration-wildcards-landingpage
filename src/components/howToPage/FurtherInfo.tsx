@@ -41,7 +41,9 @@ const FurtherInfo = () => {
           (.zip, 45mb).
         </a>
       </p>
-      <img className="pt-6" src="/img/presskit_L2.png" />
+      <a href="http://www.inspirationwildcards.com/inspirationwildcards_presskit_v1.zip">
+        <img className="pt-6" src="/img/presskit_L2.png" />
+      </a>
     </div>
   );
 };
