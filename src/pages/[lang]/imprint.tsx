@@ -19,7 +19,6 @@ const ContactAndImprintPage: NextPage<IContactAndImprintPage> = ({
     >
       <section className="flex justify-center min-h-screen">
         <div className="pt-8 md:pt-28 mx-auto w-11/12 md:w-1/2">
-          <br></br>
           <h1 className="text-accent font-semibold text-4xl">Impressum</h1>
           <br></br>
           <p>

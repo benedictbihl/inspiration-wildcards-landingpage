@@ -25,19 +25,19 @@ const LangIndex: NextPage<ILangIndex> = ({ language }) => {
       description={i18next.t("siteMeta.descriptionIndex")}
     >
       <section className="w-full flex flex-col items-center h-screen">
-        <div className="w-11/12 h-screen flex flex-col justify-end">
+        <div className="w-11/12 h-screen flex flex-col justify-start">
           <DynamicCardstack language={language} cardOnTop={cardOnTop} />
-          <div className="h-1/5 mx-auto flex items-start justify-between sm:mt-6 w-10/12 sm:w-1/2 lg:w-2/6 xl:w-1/4 ">
+          <div className="h-1/5 mx-auto flex items-start justify-between mt-6 w-10/12 sm:w-1/2 lg:w-2/6 xl:w-1/4 ">
             <Link prefetch={false} href={`/[lang]/buy`} as={`/${language}/buy`}>
               <button
                 type="button"
-                className="text-base md:text-xl xl:text-2xl font-light px-4 md:px-8 py-1 border-2 border-accent rounded-full hover:text-accent"
+                className="text-xl xl:text-2xl font-light px-4 md:px-8 py-1 border-2 border-accent rounded-full hover:text-accent"
               >
                 {i18next.t("index.buyBtn")}
               </button>
             </Link>
             <button
-              className="text-base md:text-xl xl:text-2xl font-semibold text-primary  px-4 md:px-8 py-1 border-2 border-accent rounded-full bg-accent hover:text-secondary"
+              className="text-xl xl:text-2xl font-semibold text-primary  px-4 md:px-8 py-1 border-2 border-accent rounded-full bg-accent hover:text-secondary"
               onClick={() => {
                 cardOnTop === cards.length + 3 //include the sprinkled in unavailable cards in CardStack.tsx
                   ? setCardOnTop(0)

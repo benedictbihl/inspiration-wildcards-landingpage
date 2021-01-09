@@ -20,7 +20,7 @@ const BuyPage: NextPage<IBuyPage> = ({ language }) => {
           <div className="styled-buyBG-left w-full h-1/2 xxl:h-3/4"></div>
         </div> */}
         <div className="w-11/12 mx-auto md:w-2/3 flex items-center flex-col min-h-screen">
-          <div className="pt-28">
+          <div className="pt-8 md:pt-28">
             <h2 className="font-semibold text-3xl text-accent text-center pb-6">
               {i18next.t("buy.headline")}
             </h2>

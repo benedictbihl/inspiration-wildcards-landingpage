@@ -106,8 +106,8 @@ const CardStack: React.FC<ICardStack> = ({ language, cardOnTop }) => {
 
   return (
     <div
-      style={{ minHeight: "80%" }}
-      className="w-full flex flex-col items-center justify-center md:pt-36 h-4/5 relative overflow-hidden"
+      style={{ minHeight: "500px" }}
+      className="w-full flex flex-col items-center justify-start md:pt-36 md:h-4/5 relative overflow-hidden"
     >
       <figure className="stack w-full mx-auto">
         {shuffledCards.map((card, index) => {
