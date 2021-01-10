@@ -71,7 +71,7 @@ body {
 }
 
 .styled-howToBG-left {
-  background-image: url("../../public/img/howTo_BG_left@2x.png");
+  background-image: url("../../public/img/howTo_BG_left.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position-x: center;
@@ -80,7 +80,7 @@ body {
 }
 
 .styled-howToBG-right {
-  background-image: url("../../public/img/howTo_BG_right@2x.png");
+  background-image: url("../../public/img/howTo_BG_right.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position-x: center;
@@ -89,25 +89,18 @@ body {
   position: relative;
 }
 
+.styled-carousel-slide-img {
+  width: auto !important;
+  @apply mx-auto;
+}
+.styled-dotgroup button {
+  @apply h-3 w-3 border border-secondary rounded-full;
+}
+
+.carousel__dot--selected {
+  @apply bg-secondary;
+}
 /*********************BUY PAGE*****************************************/
-
-.styled-buyBG-left {
-  background-image: url("../../public/img/buy_BG_left.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position-x: center;
-  top: 9em;
-  position: relative;
-}
-
-.styled-buyBG-right {
-  background-image: url("../../public/img/buy_BG_right.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position-x: center;
-  bottom: 4em;
-  position: relative;
-}
 
 /* Start purging... */
 @tailwind utilities;

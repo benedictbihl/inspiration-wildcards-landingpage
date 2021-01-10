@@ -23,12 +23,13 @@
     "i18next-browser-languagedetector": "^6.0.1",
     "next": "^10.0.0",
     "postcss": "^8.1.7",
+    "postcss-flexbugs-fixes": "^4.2.1",
+    "postcss-preset-env": "^6.7.0",
     "prettier": "^1.19.1",
+    "pure-react-carousel": "^1.27.6",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "stylelint-config-recommended": "^3.0.0",
-    "postcss-flexbugs-fixes": "^4.2.1",
-    "postcss-preset-env": "^6.7.0"
+    "stylelint-config-recommended": "^3.0.0"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^3.0.0",
