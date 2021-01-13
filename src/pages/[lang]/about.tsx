@@ -33,7 +33,7 @@ const HowToPage: NextPage<IHowToPage> = ({ language }) => {
             totalSlides={5}
             className="w-full"
           >
-            <div className="md:h-screen flex flex-col items-center w-full">
+            <div className="flex flex-col items-center w-full">
               <h1 className="font-bold text-3xl text-accent mx-auto w-11/12 md:w-1/3 xl:w-1/4 pb-4 pt-16 md:pt-28">
                 {i18next.t("howTo.headline")}
               </h1>
@@ -42,16 +42,16 @@ const HowToPage: NextPage<IHowToPage> = ({ language }) => {
               </p>
               <Carousel />
             </div>
-            <div className="flex items-stretch justify-center w-2/3 md:w-1/3 mx-auto md:mt-0 mt-10 mb-10">
-              <ButtonBack>
+            <div className="flex items-stretch justify-center w-2/3 sm:w-1/3 mx-auto mt-10 md:mt-5 mb-10">
+              <ButtonBack className="px-4 focus:outline-none">
                 <img
                   className="transform rotate-180"
                   src="/icon/chevron.svg"
                   alt=""
                 />
               </ButtonBack>
-              <DotGroup className="styled-dotgroup flex items-center justify-between w-full md:w-2/12 mx-8 md:mx-20" />
-              <ButtonNext>
+              <DotGroup className="styled-dotgroup flex items-center justify-between w-full md:w-3/12 mx-4 md:mx-6" />
+              <ButtonNext className="px-4 focus:outline-none">
                 <img src="/icon/chevron.svg" alt="" />
               </ButtonNext>
             </div>

@@ -50,13 +50,13 @@ const LangIndex: NextPage<ILangIndex> = ({ language }) => {
               >
                 <button
                   type="button"
-                  className="text-xl xl:text-2xl font-light px-4 md:px-8 mr-1 py-1 border-2 border-accent rounded-full hover:text-accent "
+                  className="focus:outline-none text-xl xl:text-2xl font-light px-4 md:px-8 mr-1 py-1 border-2 border-accent rounded-full hover:text-accent "
                 >
                   {i18next.t("index.buyBtn")}
                 </button>
               </Link>
               <button
-                className="text-xl xl:text-2xl font-semibold text-primary ml-1 px-4 md:px-8 py-1 border-2 border-accent rounded-full bg-accent hover:text-secondary"
+                className="focus:outline-none text-xl xl:text-2xl font-semibold text-primary ml-1 px-4 md:px-8 py-1 border-2 border-accent rounded-full bg-accent hover:text-secondary"
                 onClick={() => {
                   cardOnTop === cards.length + 3 //include the sprinkled in unavailable cards in CardStack.tsx
                     ? setCardOnTop(0)

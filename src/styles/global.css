@@ -102,6 +102,10 @@ body {
 }
 /*********************BUY PAGE*****************************************/
 
+.styled-buy-btn {
+  @apply flex justify-center py-3;
+  filter: drop-shadow(1px 1px 2px #00000080);
+}
 /* Start purging... */
 @tailwind utilities;
 /* Stop purging. */

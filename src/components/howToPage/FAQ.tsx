@@ -6,7 +6,8 @@ const FAQ: React.FC = () => {
     { Q: "howTo.Question1", A: "howTo.Answer1" },
     { Q: "howTo.Question2", A: "howTo.Answer2" },
     { Q: "howTo.Question3", A: "howTo.Answer3" },
-    { Q: "howTo.Question4", A: "howTo.Answer4" }
+    { Q: "howTo.Question4", A: "howTo.Answer4" },
+    { Q: "howTo.Question5", A: "howTo.Answer5" }
   ];
   return (
     <div className="styled-FAQ mt-20">

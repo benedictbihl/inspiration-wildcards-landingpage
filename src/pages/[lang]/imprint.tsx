@@ -35,25 +35,22 @@ const ContactAndImprintPage: NextPage<IContactAndImprintPage> = ({
           <br />
           <h3 className="text-xl font-semibold">Urheberrecht</h3>
           <p>
-            Die durch die Seitenbetreiber erstellten Inhalte und Werke auf
-            diesen Seiten unterliegen dem deutschen Urheberrecht. Die
-            Vervielf&auml;ltigung, Bearbeitung, Verbreitung und jede Art der
-            Verwertung au&szlig;erhalb der Grenzen des Urheberrechtes
-            bed&uuml;rfen der schriftlichen Zustimmung des jeweiligen Autors
-            bzw. Erstellers. Downloads und Kopien dieser Seite sind nur f&uuml;r
-            den privaten, nicht kommerziellen Gebrauch gestattet.
-          </p>
-          <p>
-            Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt
-            wurden, werden die Urheberrechte Dritter beachtet. Insbesondere
-            werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie
-            trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten
-            wir um einen entsprechenden Hinweis. Bei Bekanntwerden von
-            Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
+            Die Inhalte und Werke auf diesen Seiten unterliegen dem
+            Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und
+            jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes
+            bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw.
+            Erstellers. Soweit Inhalte auf dieser Seite nicht vom Betreiber
+            erstellt wurden, werden die Urheberrechte Dritter beachtet und als
+            solche gekennzeichnet. Solltest Du trotzdem auf eine
+            Urheberrechtsverletzung aufmerksam werden, bitte ich um einen
+            entsprechenden Hinweis.
           </p>
           <br />
           <h3 className="text-xl font-semibold">Cookies</h3>
-          <p>Auf dieser Seite werden keine Cookies verwendet.</p>
+          <p>
+            Keine Cookies auf dieser Seite verwendet, um diese übelst nervigen
+            Popup-Fragen nicht zu benötigen. Geht auch ohne.
+          </p>
         </div>
       </section>
     </Layout>
