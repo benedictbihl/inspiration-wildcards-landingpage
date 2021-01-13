@@ -2,14 +2,19 @@
 module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: false
+    purgeLayersByDefault: true
   },
-  // purge: [
-  //   "./components/**/*.{js,ts,jsx,tsx}",
-  //   "./pages/**/*.{js,ts,jsx,tsx}",
-  //   "./data/**/*.{js,ts,jsx,tsx}",
-  // ],
-  purge: false,
+  purge: [
+    "./src/pages/**/*.js",
+    "./src/pages/**/*.ts",
+    "./src/pages/**/*.jsx",
+    "./src/pages/**/*.tsx",
+    "./src/components/**/*.js",
+    "./src/components/**/*.ts",
+    "./src/components/**/*.jsx",
+    "./src/components/**/*.tsx"
+    ],
+  // purge: false,
   theme: {
     screens: {
       sm: "48em",
