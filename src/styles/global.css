@@ -22,14 +22,22 @@ body {
   @apply text-typo-default p-4 relative font-light;
 }
 
+.styled-navbar-link:before {
+  display: block;
+  content: attr(title);
+  font-weight: bold;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
 .styled-navbar-link:hover {
-  text-shadow: 1px 0 0 #232321;
-  @apply text-typo-active;
+  /* text-shadow: 2px 0 0 #232321; */
+  @apply text-typo-active font-semibold;
 }
 
 .styled-navbar-link-active {
-  text-shadow: 1px 0 0 #232321;
-  @apply text-typo-active;
+  /* text-shadow: 2px 0 0 #232321; */
+  @apply text-typo-active font-semibold;
 }
 
 .styled-navbar-link-active::after {

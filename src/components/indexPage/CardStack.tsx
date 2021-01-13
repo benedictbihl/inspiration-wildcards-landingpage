@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useMemo } from "react";
-import FlipCard from "../sampleCardsFeature/FlipCard";
+import FlipCard from "./FlipCard";
 import i18next from "i18next";
 import { cards, cards_unavailable } from "../../util/cards";
 
@@ -93,7 +93,7 @@ const CardStack: React.FC<ICardStack> = ({ language, cardOnTop, onLoad }) => {
           setCardNumber("");
           setCardCategory(i18next.t("index.explanation"));
         } else {
-          setCardNumber(`card ${shuffledCards[cardOnTop + 1].number}/50`);
+          setCardNumber(`${shuffledCards[cardOnTop + 1].number}/50`);
           setCardCategory(
             //@ts-ignore
             i18next.t("index.category") +

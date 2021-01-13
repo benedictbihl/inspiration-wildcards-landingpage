@@ -12,6 +12,7 @@ const NavBar: React.FC<INavBar> = ({ language, pathname, className }) => {
     <div className={`justify-center w-8/12 ${className}`}>
       <Link prefetch={false} href={`/[lang]/about`} as={`/${language}/about`}>
         <a
+          title={i18next.t("siteMeta.titleHowTo")}
           className={`styled-navbar-link ${
             pathname === "/[lang]/about" ? "styled-navbar-link-active" : ""
           }`}
@@ -21,6 +22,7 @@ const NavBar: React.FC<INavBar> = ({ language, pathname, className }) => {
       </Link>
       <Link prefetch={false} href={`/[lang]`} as={`/${language}`}>
         <a
+          title={i18next.t("siteMeta.titleIndex")}
           className={`styled-navbar-link ${
             pathname === "/[lang]" ? "styled-navbar-link-active" : ""
           }`}
@@ -30,6 +32,7 @@ const NavBar: React.FC<INavBar> = ({ language, pathname, className }) => {
       </Link>
       <Link prefetch={false} href={`/[lang]/buy`} as={`/${language}/buy`}>
         <a
+          title={i18next.t("siteMeta.titleBuy")}
           className={`styled-navbar-link ${
             pathname === "/[lang]/buy" ? "styled-navbar-link-active" : ""
           }`}

@@ -68,6 +68,7 @@ const Header: React.FC<IHeader> = ({ language }) => {
           as={`/${language}/imprint`}
         >
           <a
+            title={i18next.t("siteMeta.titleImprint")}
             className={`mr-6 styled-navbar-link ${
               pathname === "/[lang]/imprint" ? "styled-navbar-link-active" : ""
             }`}

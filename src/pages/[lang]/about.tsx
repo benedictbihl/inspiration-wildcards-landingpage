@@ -3,16 +3,16 @@ import { NextPage, GetStaticPaths, GetStaticProps } from "next";
 import Layout from "../../components/Layout";
 import { getAllLanguageSlugs, getLanguage } from "../../lib/lang";
 import i18next from "i18next";
-import Instructions from "../../components/howToPage/Instructions";
-import FAQ from "../../components/howToPage/FAQ";
-import FurtherInfo from "../../components/howToPage/FurtherInfo";
+import Instructions from "../../components/aboutPage/Instructions";
+import FAQ from "../../components/aboutPage/FAQ";
+import FurtherInfo from "../../components/aboutPage/FurtherInfo";
 import {
   CarouselProvider,
   DotGroup,
   ButtonBack,
   ButtonNext
 } from "pure-react-carousel";
-import Carousel from "../../components/howToPage/Carousel";
+import Carousel from "../../components/aboutPage/Carousel";
 interface IHowToPage {
   language: string;
 }

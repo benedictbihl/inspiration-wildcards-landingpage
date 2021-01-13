@@ -8,7 +8,7 @@ import dynamic from "next/dynamic";
 import { cards } from "../../util/cards";
 
 const DynamicCardstack = dynamic(
-  () => import("../../components/index/CardStack"),
+  () => import("../../components/indexPage/CardStack"),
   { ssr: false }
 );
 interface ILangIndex {
