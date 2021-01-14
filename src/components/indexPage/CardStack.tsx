@@ -6,11 +6,9 @@ import { cards, cards_unavailable } from "../../util/cards";
 interface ICardStack {
   language: string;
   cardOnTop: number;
-  onLoad: () => void;
 }
 
-const CardStack: React.FC<ICardStack> = ({ language, cardOnTop, onLoad }) => {
-  const [cardWidth, setCardWidth] = useState(300);
+const CardStack: React.FC<ICardStack> = ({ language, cardOnTop }) => {
   const initialRender = useRef(true);
   const cardRefs = useRef([]);
   cardRefs.current = [];
@@ -23,6 +21,19 @@ const CardStack: React.FC<ICardStack> = ({ language, cardOnTop, onLoad }) => {
   const [cardCategory, setCardCategory] = useState(
     i18next.t("index.explanation")
   );
+
+  useEffect(() => {
+    if (shuffledCards[cardOnTop + 1] === undefined) {
+      setCardCategory(i18next.t("index.explanation"));
+    } else {
+      setCardCategory(
+        //@ts-ignore
+        i18next.t("index.category") +
+          " " +
+          i18next.t(shuffledCards[cardOnTop + 1].category)
+      );
+    }
+  }, [language]);
 
   function shuffle(array) {
     let currentIndex = array.length,
@@ -106,20 +117,8 @@ const CardStack: React.FC<ICardStack> = ({ language, cardOnTop, onLoad }) => {
   }, [cardOnTop]);
 
   return (
-    <div
-      style={{ minHeight: "500px" }}
-      className="w-full flex flex-col items-center justify-start pt-16 md:pt-28 md:h-4/5 relative overflow-hidden"
-    >
-      <figure
-        onLoad={() => {
-          onLoad();
-          setCardWidth(
-            document.getElementsByClassName("flip-card-front-img")[0]
-              .clientWidth
-          );
-        }}
-        className="stack w-full mx-auto"
-      >
+    <div className=" flex flex-col items-center justify-start pt-16 md:pt-28 relative ">
+      <figure className="stack w-full mx-auto">
         {shuffledCards.map((card, index) => {
           return (
             <div
@@ -150,10 +149,9 @@ const CardStack: React.FC<ICardStack> = ({ language, cardOnTop, onLoad }) => {
       </figure>
       <div
         style={{
-          width: cardWidth + "px",
-          left: "10px"
+          width: "var(--width)"
         }}
-        className="font-light relative flex justify-between w-10/12 sm:w-1/2 lg:w-2/6 xl:w-1/4"
+        className="font-light relative flex justify-between mt-10 mb-6 card-meta"
       >
         <p className="">{cardCategory}</p>
         <p className="">{cardNumber}</p>

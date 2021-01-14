@@ -40,7 +40,7 @@ const FlipCard: React.FC<IFlipCard> = ({
 
   return (
     <div
-      onContextMenu={e => e.preventDefault()}
+      // onContextMenu={e => e.preventDefault()}
       className={`flip-card ${className ? className : ""}`}
     >
       <div
@@ -51,13 +51,18 @@ const FlipCard: React.FC<IFlipCard> = ({
       >
         <div className="flip-card-front">
           <img
+            style={{ width: "var(--width)", height: "var(--height)" }}
             className="flip-card-front-img"
             src={imageFront}
             alt="Card Front"
           />
         </div>
         <div className="flip-card-back">
-          <img src={imageBack} alt="Card Back" />
+          <img
+            style={{ width: "var(--width)", height: "var(--height)" }}
+            src={imageBack}
+            alt="Card Back"
+          />
         </div>
       </div>
     </div>

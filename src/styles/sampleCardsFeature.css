@@ -1,9 +1,14 @@
+:root {
+  --ratio: 81 / 125;
+  --height: 60vh;
+  --width: calc(var(--height) * var(--ratio));
+}
 /*********************FLIPCARD*****************************************/
 
 .flip-card {
   background-color: transparent;
-  width: 100%;
-  height: 100%;
+  width: var(--width);
+  height: var(--height);
   perspective: 1000px;
 }
 
@@ -28,7 +33,6 @@
 
 .flip-card-front img,
 .flip-card-back img {
-  height: 92%;
   margin: 0 auto;
 }
 
@@ -54,7 +58,8 @@
 
 .stack {
   position: relative;
-  height: 100%;
+  height: var(--height);
+  width: var(--width);
   top: 35px;
   filter: drop-shadow(3px 3px 4px);
 }
@@ -65,48 +70,27 @@
   }
 }
 
-@media (max-width: 64em) {
-  .stack {
-    width: 90vw;
-    height: 60vh;
+@media (max-width: 47.9em) {
+  .card-meta,
+  .card-buttons {
+    left: unset !important;
   }
 }
+
 .card {
   cursor: pointer;
-  width: 100%;
-  height: 100%;
+  width: var(--width);
+  height: var(--height);
   position: absolute;
   transform: translateY(0);
   animation: 1s ease 1 normal forwards;
   transition: all 0.3s linear 0.5s;
 }
-.card.one {
-  left: 0;
-  top: 0;
-  z-index: 4;
-}
-.card.two {
-  left: 5px;
-  top: 5px;
-  z-index: 3;
-}
-.card.three {
+.card-meta,
+.card-buttons {
   left: 10px;
-  top: 10px;
-  z-index: 2;
 }
 
-.card.four {
-  left: 15px;
-  top: 15px;
-  z-index: 1;
-}
-
-.card.five {
-  left: 20px;
-  top: 20px;
-  z-index: 0;
-}
 .card span {
   display: block;
   position: absolute;
