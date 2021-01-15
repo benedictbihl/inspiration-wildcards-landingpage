@@ -23,12 +23,8 @@ body {
 }
 
 .styled-navbar-link:before {
-  display: block;
   content: attr(title);
-  font-weight: bold;
-  height: 0;
-  overflow: hidden;
-  visibility: hidden;
+  @apply font-semibold block overflow-hidden invisible h-0;
 }
 .styled-navbar-link:hover {
   /* text-shadow: 2px 0 0 #232321; */

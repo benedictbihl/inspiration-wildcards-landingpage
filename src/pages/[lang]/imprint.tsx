@@ -22,7 +22,7 @@ const ContactAndImprintPage: NextPage<IContactAndImprintPage> = ({
           <h1 className="text-accent font-semibold text-4xl">Impressum</h1>
           <br></br>
           <p>
-            ©2018-2021 Jens M&uuml;hlstedt
+            ©2019-2021 Jens M&uuml;hlstedt
             <br />
             Zenettistr. 39
             <br />
@@ -31,7 +31,11 @@ const ContactAndImprintPage: NextPage<IContactAndImprintPage> = ({
           <br />
 
           <h2 className="text-xl font-semibold">Kontakt</h2>
-          <p>info@inspirationwildcards.com</p>
+          <p>
+            <a href="mailto:info@inspirationwildcards.com">
+              info@inspirationwildcards.com
+            </a>
+          </p>
           <br />
           <h3 className="text-xl font-semibold">Urheberrecht</h3>
           <p>

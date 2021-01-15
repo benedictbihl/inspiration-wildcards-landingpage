@@ -88,7 +88,7 @@ const LangIndex: NextPage<ILangIndex> = ({ language }) => {
           </div>
           <footer className="w-full bottom-0 flex justify-center py-6">
             <p className="mx-auto text-center">
-              <span className="text-secondary">©2018-2021 Jens Mühlstedt</span>
+              <span className="text-secondary">©2019-2021 Jens Mühlstedt</span>
             </p>
           </footer>
         </div>

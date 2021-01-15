@@ -29,7 +29,7 @@ const BuyPage: NextPage<IBuyPage> = ({ language }) => {
                 <div className="w-full flex flex-col items-center mb-4">
                   <span className="font-semibold text-xl text-accent text-center md:text-left">
                     English
-                    <br /> "Inspiration Wildcards"
+                    <br /> “Inspiration Wildcards”
                     <br />
                     <span className="font-light">
                       {i18next.t("buy.isbn_EN")}
@@ -64,7 +64,7 @@ const BuyPage: NextPage<IBuyPage> = ({ language }) => {
                     <a
                       target="_blank"
                       rel="noreferrer"
-                      href={i18next.t("buy.GOOGLE_LINK_EN")}
+                      href={i18next.t("buy.GOOGLE_link_EN")}
                     >
                       <img src="/img/button_google_en.png"></img>
                     </a>
@@ -75,7 +75,7 @@ const BuyPage: NextPage<IBuyPage> = ({ language }) => {
                 <div className="w-full flex flex-col items-center mb-4">
                   <span className="font-semibold text-xl text-accent text-center md:text-left">
                     Deutsch
-                    <br /> "Wildcards der Inspiration"
+                    <br /> „Wildcards der Inspiration“
                     <br />
                     <span className="font-light">
                       {i18next.t("buy.isbn_DE")}

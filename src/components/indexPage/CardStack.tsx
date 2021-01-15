@@ -23,7 +23,7 @@ const CardStack: React.FC<ICardStack> = ({ language, cardOnTop }) => {
   );
 
   useEffect(() => {
-    if (shuffledCards[cardOnTop + 1] === undefined) {
+    if (shuffledCards[cardOnTop + 1] === undefined || cardOnTop === -1) {
       setCardCategory(i18next.t("index.explanation"));
     } else {
       setCardCategory(
@@ -151,7 +151,7 @@ const CardStack: React.FC<ICardStack> = ({ language, cardOnTop }) => {
         style={{
           width: "var(--width)"
         }}
-        className="font-light relative flex justify-between mt-10 mb-6 card-meta"
+        className="font-light relative flex justify-between mt-10 xxl:mt-20 mb-6 card-meta"
       >
         <p className="">{cardCategory}</p>
         <p className="">{cardNumber}</p>

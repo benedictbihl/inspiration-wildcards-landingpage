@@ -22,7 +22,7 @@ const Carousel: React.FC = () => {
           <Image
             className="styled-carousel-slide-img"
             hasMasterSpinner
-            src="/img/carousel/01_cards_box_ad_01.png"
+            src="/img/carousel/01_cards_box_01.png"
           />
         </Slide>
         <Slide index={1}>

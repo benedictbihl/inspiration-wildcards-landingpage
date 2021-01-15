@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import i18next from "i18next";
 import Header from "./Header";
+import { motion } from "framer-motion";
 
 interface ILayout {
   title: string;
@@ -9,6 +10,22 @@ interface ILayout {
   language: string;
   showFooter?: boolean;
 }
+
+const animation = {
+  exit: {
+    y: 150,
+    opacity: 0,
+    transition: { duration: 0.5, ease: [0.175, 0.85, 0.42, 0.96] }
+  },
+  enter: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      ease: [0.175, 0.85, 0.42, 0.96]
+    }
+  }
+};
 
 const Layout: React.FC<ILayout> = ({
   title,
@@ -32,11 +49,15 @@ const Layout: React.FC<ILayout> = ({
         <title>{i18next.t(title)}</title>
       </Head>
       <Header language={language} />
-      <main>{children}</main>
+      <motion.div initial="exit" animate="enter" exit="exit">
+        <motion.div variants={animation}>
+          <main>{children}</main>
+        </motion.div>
+      </motion.div>
       {showFooter && (
         <footer className="w-full bottom-0 flex justify-center py-6">
           <p className="mx-auto text-center">
-            <span className="text-secondary"> ©2018-2021 Jens Mühlstedt</span>
+            <span className="text-secondary"> ©2019-2021 Jens Mühlstedt</span>
           </p>
         </footer>
       )}
