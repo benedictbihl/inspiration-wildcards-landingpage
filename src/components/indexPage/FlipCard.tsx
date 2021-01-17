@@ -40,7 +40,7 @@ const FlipCard: React.FC<IFlipCard> = ({
 
   return (
     <div
-      // onContextMenu={e => e.preventDefault()}
+      onContextMenu={e => e.preventDefault()}
       className={`flip-card ${className ? className : ""}`}
     >
       <div

@@ -16,8 +16,9 @@ const ContactAndImprintPage: NextPage<IContactAndImprintPage> = ({
       language={language}
       title={i18next.t("siteMeta.titleImprint")}
       description={i18next.t("siteMeta.descriptionImprint")}
+      showFooter={false}
     >
-      <section className="flex justify-center min-h-screen text-lg">
+      <section className="flex justify-between min-h-screen text-lg flex-col">
         <div className="pt-16 md:pt-28 mx-auto w-11/12 md:w-1/2">
           <h1 className="text-accent font-semibold text-4xl">Impressum</h1>
           <br></br>
@@ -56,6 +57,11 @@ const ContactAndImprintPage: NextPage<IContactAndImprintPage> = ({
             Popup-Fragen nicht zu benötigen. Geht auch ohne.
           </p>
         </div>
+        <footer className="w-full bottom-0 flex justify-center py-6">
+          <p className="mx-auto text-center">
+            <span className="text-secondary">©2019-2021 Jens Mühlstedt</span>
+          </p>
+        </footer>
       </section>
     </Layout>
   );

@@ -13,15 +13,15 @@ interface ILayout {
 
 const animation = {
   exit: {
-    y: 150,
+    y: 0,
     opacity: 0,
-    transition: { duration: 0.5, ease: [0.175, 0.85, 0.42, 0.96] }
+    transition: { duration: 0.3, ease: [0.175, 0.85, 0.42, 0.96] }
   },
   enter: {
     y: 0,
     opacity: 1,
     transition: {
-      duration: 0.5,
+      duration: 0.3,
       ease: [0.175, 0.85, 0.42, 0.96]
     }
   }
@@ -51,7 +51,7 @@ const Layout: React.FC<ILayout> = ({
       <Header language={language} />
       <motion.div initial="exit" animate="enter" exit="exit">
         <motion.div variants={animation}>
-          <main>{children}</main>
+          <main style={{ paddingLeft: "calc(100vw -  100%)" }}>{children}</main>
         </motion.div>
       </motion.div>
       {showFooter && (
