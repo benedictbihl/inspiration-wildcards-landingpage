@@ -16,7 +16,10 @@ const FAQ: React.FC = () => {
       </h3>
       {QuestionSet.map((item, index) => {
         return (
-          <div key={index} className="mb-10">
+          <div
+            key={index}
+            className={`${index === QuestionSet.length - 1 ? "" : "mb-10"}`}
+          >
             <p className="font-semibold mb-1">{i18next.t(item.Q)}</p>
             <p className="font-light">{i18next.t(item.A)}</p>
           </div>

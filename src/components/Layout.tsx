@@ -51,11 +51,11 @@ const Layout: React.FC<ILayout> = ({
       <Header language={language} />
       <motion.div initial="exit" animate="enter" exit="exit">
         <motion.div variants={animation}>
-          <main style={{ paddingLeft: "calc(100vw -  100%)" }}>{children}</main>
+          <main>{children}</main>
         </motion.div>
       </motion.div>
       {showFooter && (
-        <footer className="w-full bottom-0 flex justify-center py-6">
+        <footer className="w-full bottom-0 flex justify-center pb-6 pt-10">
           <p className="mx-auto text-center">
             <span className="text-secondary"> ©2019-2021 Jens Mühlstedt</span>
           </p>

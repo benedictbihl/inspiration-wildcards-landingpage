@@ -11,20 +11,21 @@ interface IBuyPage {
 const BuyPage: NextPage<IBuyPage> = ({ language }) => {
   return (
     <Layout
+      showFooter={false}
       language={language}
       title={i18next.t("siteMeta.titleBuy")}
       description={i18next.t("siteMeta.descriptionBuy")}
     >
       <section className="flex w-full justify-center text-lg  ">
-        <div className="w-11/12 mx-auto md:w-2/3 flex items-center flex-col min-h-screen">
-          <div className="pt-16 md:pt-28">
-            <h2 className="text-accent font-semibold text-4xl pb-6 w-11/12 md:w-1/3 mx-auto md:text-left text-center">
+        <div className="w-full mx-auto flex items-center flex-col min-h-screen">
+          <div className="w-full pt-16 md:pt-28 flex-grow">
+            <h2 className="text-accent font-semibold text-4xl pb-6 w-11/12 md:w-1/3 xl:w-1/4 mx-auto text-left">
               {i18next.t("buy.headline")}
             </h2>
-            <p className="text-lg font-light mb-8 w-11/12 md:w-1/3 mx-auto md:text-left text-center">
+            <p className="text-lg font-light mb-8 w-11/12 md:w-1/3 xl:w-1/4 mx-auto text-left">
               {i18next.t("buy.subheadline")}
             </p>
-            <div className="w-full flex flex-col md:flex-row">
+            <div className="w-11/12 md:w-2/3 mx-auto flex flex-col md:flex-row">
               <div className="w-11/12 mx-auto md:w-1/2 mb-4">
                 <div className="w-full flex flex-col items-center mb-4">
                   <span className="font-semibold text-xl text-accent text-center md:text-left">
@@ -120,6 +121,11 @@ const BuyPage: NextPage<IBuyPage> = ({ language }) => {
               </div>
             </div>
           </div>
+          <footer className="w-full bottom-0 flex justify-center pb-6 pt-10">
+            <p className="mx-auto text-center">
+              <span className="text-secondary">©2019-2021 Jens Mühlstedt</span>
+            </p>
+          </footer>
         </div>
       </section>
     </Layout>
