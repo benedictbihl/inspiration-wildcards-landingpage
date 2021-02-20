@@ -96,8 +96,14 @@ body {
   position: relative;
 }
 
+.styled-carousel-slide .carousel__inner-slide {
+  @apply flex items-center;
+}
+
 .styled-carousel-slide-img {
   width: auto !important;
+  height: auto !important;
+  max-height: 100% !important;
   @apply mx-auto;
 }
 .styled-dotgroup button {

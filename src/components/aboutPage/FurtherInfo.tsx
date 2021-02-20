@@ -21,14 +21,35 @@ const FurtherInfo = () => {
       </p>
       <br />
       <p className=" font-light text-accent">
-        {i18next.t("howTo.futherInfo_paragraph2_a")}
+        <a
+          className="underline"
+          target="_blank"
+          rel="noreferrer noopen"
+          href="https://www.linkedin.com/company/inspirationwildcards/"
+        >
+          {i18next.t("howTo.futherInfo_paragraph2_a")}
+        </a>
+        {i18next.t("howTo.futherInfo_paragraph2_b")}
+      </p>
+      <br />
+      <p className=" font-light text-accent">
+        {i18next.t("howTo.futherInfo_paragraph3_a")}
         <a
           className="underline"
           target="_blank"
           rel="noreferrer noopen"
           href="https://www.behance.net/gallery/107172801/Inspiration-Wild-Cards-%28Making-Of%29"
         >
-          {i18next.t("howTo.futherInfo_paragraph2_b")}
+          {i18next.t("howTo.futherInfo_paragraph3_b")}
+        </a>
+        {i18next.t("howTo.futherInfo_paragraph3_c")}
+        <a
+          className="underline"
+          target="_blank"
+          rel="noreferrer noopen"
+          href="https://www.behance.net/gallery/111607071/Inspiration-Wild-Cards-Website-%28Making-of%29"
+        >
+          {i18next.t("howTo.futherInfo_paragraph3_d")}
         </a>
       </p>
       <br />
@@ -37,11 +58,15 @@ const FurtherInfo = () => {
         <a
           href="http://www.inspirationwildcards.com/inspirationwildcards_presskit_v1.zip"
           className="underline"
+          download
         >
           (.zip, 45mb).
         </a>
       </p>
-      <a href="http://www.inspirationwildcards.com/inspirationwildcards_presskit_v1.zip">
+      <a
+        href="http://www.inspirationwildcards.com/inspirationwildcards_presskit_v1.zip"
+        download
+      >
         <img className="pt-6" src="/img/presskit_L2.png" />
       </a>
     </div>

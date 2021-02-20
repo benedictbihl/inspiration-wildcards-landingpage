@@ -70,6 +70,15 @@ const BuyPage: NextPage<IBuyPage> = ({ language }) => {
                       <img src="/img/button_google_en.png"></img>
                     </a>
                   </p>
+                  <p className="styled-buy-btn">
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href={i18next.t("buy.GOOGLE_link_2_EN")}
+                    >
+                      <img src="/img/button_google_en2.png"></img>
+                    </a>
+                  </p>
                 </div>
               </div>
               <div className="mt-8 md:mt-0 w-11/12 mx-auto md:w-1/2 mb-4">
@@ -115,6 +124,15 @@ const BuyPage: NextPage<IBuyPage> = ({ language }) => {
                       href={i18next.t("buy.GOOGLE_link_DE")}
                     >
                       <img src="/img/button_google_de.png"></img>
+                    </a>
+                  </p>
+                  <p className="styled-buy-btn">
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href={i18next.t("buy.GOOGLE_link_2_DE")}
+                    >
+                      <img src="/img/button_google_de2.png"></img>
                     </a>
                   </p>
                 </div>

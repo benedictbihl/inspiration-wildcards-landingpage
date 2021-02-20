@@ -30,7 +30,7 @@ const HowToPage: NextPage<IHowToPage> = ({ language }) => {
             infinite
             naturalSlideWidth={16}
             naturalSlideHeight={9}
-            totalSlides={5}
+            totalSlides={6}
             className="w-full"
           >
             <div className="flex flex-col items-center w-full">

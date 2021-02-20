@@ -17,8 +17,12 @@
     "futherInfo_paragraph1_a": "There is a connected article about inspiration and a structure for the process: ",
     "futherInfo_paragraph1_b": "The 3 phases of inspiration (Published at UXPA Magazine)",
     "futherInfo_paragraph1_c": " This describes the basic inspiration principle and phases, where a method like the inspiration wild cards can be part of.",
-    "futherInfo_paragraph2_a": "If you want to know the story of how the cards came to life, there is a ",
-    "futherInfo_paragraph2_b": "Behance project page containing the making-of.",
+    "futherInfo_paragraph2_a": "On LinkedIn ",
+    "futherInfo_paragraph2_b": "you find a page for the Inspiration Wild Cards, containing regular updates and social interaction.",
+    "futherInfo_paragraph3_a": "If you want to know the story of how the cards came to life, there is a ",
+    "futherInfo_paragraph3_b": "Behance project page containing the making-of. ",
+    "futherInfo_paragraph3_c": "Same for the website, also their making-of is on a separate ",
+    "futherInfo_paragraph3_d": "Behance page.",
     "futherInfo_paragraph3": "You can also download a press kit with 40 high-res images ",
     "howTo": "HOW-TO",
     "precondition": "Precondition: You or your group need new ideas.",
@@ -60,6 +64,7 @@
     "AMZN_link_EN": "https://www.amazon.de/dp/3832551794/",
     "AMZN_EN": "at amazon.de",
     "GOOGLE_link_EN": "https://www.google.com/search?q=ISBN+978-3-8325-5179-7",
+    "GOOGLE_link_2_EN": "https://www.google.com/search?q=inspiration+wildcards",
     "GOOGLE_EN": "Google-Search for the ISBN",
     "isbn_DE": "ISBN 978-3-8325-5178-0",
     "LOGOS_link_DE": "https://www.logos-verlag.de/cgi-bin/engbuchmid?isbn=5178&lng=deu&id=",
@@ -67,6 +72,7 @@
     "AMZN_link_DE": "https://www.amazon.de/dp/3832551786/",
     "AMZN_DE": "bei amazon.de",
     "GOOGLE_link_DE": "https://www.google.com/search?q=ISBN+978-3-8325-5178-0",
-    "GOOGLE_DE": "Google-Suche nach ISBN"
+    "GOOGLE_DE": "Google-Suche nach ISBN",
+    "GOOGLE_link_2_DE": "https://www.google.com/search?q=wildcars+der+inspiration"
   }
 }
