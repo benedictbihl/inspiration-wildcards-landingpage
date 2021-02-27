@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect, useMemo } from "react";
 import FlipCard from "./FlipCard";
 import i18next from "i18next";
 import { cards, cards_unavailable } from "../../util/cards";
-
+import { shuffle } from "../../util/helper";
 interface ICardStack {
   language: string;
   cardOnTop: number;
@@ -34,23 +34,6 @@ const CardStack: React.FC<ICardStack> = ({ language, cardOnTop }) => {
       );
     }
   }, [language]);
-
-  function shuffle(array) {
-    let currentIndex = array.length,
-      temporaryValue,
-      randomIndex;
-    // While there remain elements to shuffle...
-    while (0 !== currentIndex) {
-      // Pick a remaining element...
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
-      // And swap it with the current element.
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
-    }
-    return array;
-  }
 
   /**
    * Shuffle once,then add the cover card to the beginning &

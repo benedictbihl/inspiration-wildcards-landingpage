@@ -73,6 +73,32 @@
     "AMZN_DE": "bei amazon.de",
     "GOOGLE_link_DE": "https://www.google.com/search?q=ISBN+978-3-8325-5178-0",
     "GOOGLE_DE": "Google-Suche nach ISBN",
-    "GOOGLE_link_2_DE": "https://www.google.com/search?q=wildcars+der+inspiration"
+    "GOOGLE_link_2_DE": "https://www.google.com/search?q=wildcars+der+inspiration",
+    "testimonials": {
+      "testimonial_1": "Viele Leute denken, sie sind nicht kreativ. Mit den Karten ist es aber kinderleicht, auf Ideen zu kommen.",
+      "testimonial_job_1": "Psychologist, Germany",
+      "testimonial_2": "I have awesome ideas usually, but with the cards they become brilliant  - a stroke of genius!",
+      "testimonial_job_2": "Engineer, South Africa",
+      "testimonial_3": "My favorite card is the one with the cat. Meow.",
+      "testimonial_job_3": "Managing Director, Germany",
+      "testimonial_4": "Ich wollte immer reich und berühmt werden. Ich denke, mit den Karten gelingt mir das, die bringen mich viel zum Nachdenken. Mega, das Quartett!",
+      "testimonial_job_4": "Geschäftsführer, Deutschland",
+      "testimonial_5": "I enjoy trying new things, so I used them in a workshop. A wyld exercise with insane results. It's the ++ for every </>",
+      "testimonial_job_5": "Creative Technologist, Germany",
+      "testimonial_6": "We started using the wildcards in innovation workshops and what can I say, it works incredibly well. Each and every team improved at least one important feature of their product with the help of the cards. What more can you expect.",
+      "testimonial_job_6": "Professor, Switzerland",
+      "testimonial_7": "I used the card set in several projects in different countries - it's a must-have in my workshop box.",
+      "testimonial_job_7": "Interaction Designer, Germany",
+      "testimonial_8": "The inspiration cards don't need preparation and they're explained in seconds. It's a very agile tool.",
+      "testimonial_job_8": "Engineer, Sweden",
+      "testimonial_9": "This set is an awesome tool for innovation projects. I highly recommend it.",
+      "testimonial_job_9": "Project Manager, Germany",
+      "testimonial_10": "In international projects everybody can relate to several of the cards. It's fun and it really leads to new ideas.",
+      "testimonial_job_10": "Strategist, China",
+      "testimonial_11": "Inspiration is a basic need of designers. This card set is a good method to push your creativity further.",
+      "testimonial_job_11": "Industrial Designer, France",
+      "testimonial_12": "Babbedi bebbedo boopedie.",
+      "testimonial_job_12": "UI Designer, Italy"
+    }
   }
 }

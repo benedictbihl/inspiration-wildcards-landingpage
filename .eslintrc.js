@@ -24,7 +24,8 @@ module.exports = {
    '@typescript-eslint/ban-ts-comment': 'off',
     'react/prop-types': 'off',
     'react/display-name': 'off',
-    'jsx-a11y/anchor-is-valid': 'off'
+    'jsx-a11y/anchor-is-valid': 'off',
+    '@typescript-eslint/no-explicit-any': 'off'
   },
   settings: {
     react: {

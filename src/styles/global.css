@@ -100,6 +100,10 @@ body {
   @apply flex items-center;
 }
 
+.styled-carousel-slide__testimonials .carousel__inner-slide {
+  @apply flex items-start;
+}
+
 .styled-carousel-slide-img {
   width: auto !important;
   height: auto !important;
