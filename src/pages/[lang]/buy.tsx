@@ -5,6 +5,7 @@ import { getAllLanguageSlugs, getLanguage } from "../../lib/lang";
 import i18next from "i18next";
 import { CarouselProvider, ButtonBack, ButtonNext } from "pure-react-carousel";
 import { testimonials } from "../../util/testimonials";
+import { useWindowSize } from "../../util/hooks";
 const DynamicTestimonialCarousel = React.lazy(() =>
   import("../../components/buyPage/TestimonialCarousel")
 );
@@ -14,6 +15,7 @@ interface IBuyPage {
 const isServer = typeof window === "undefined";
 
 const BuyPage: NextPage<IBuyPage> = ({ language }) => {
+  const { width } = useWindowSize();
   return (
     <Layout
       showFooter={false}
@@ -145,10 +147,15 @@ const BuyPage: NextPage<IBuyPage> = ({ language }) => {
             </div>
             <CarouselProvider
               infinite
-              naturalSlideWidth={16}
-              naturalSlideHeight={9}
-              totalSlides={Math.ceil(testimonials.length / 3)}
-              className="w-full mt-20"
+              naturalSlideWidth={width <= 768 ? 9 : 16}
+              naturalSlideHeight={width <= 768 ? 16 : 9}
+              isIntrinsicHeight
+              totalSlides={
+                width <= 768
+                  ? testimonials.length
+                  : Math.ceil(testimonials.length / 3) // since we use chunks of 3 for desktop, we need less slides
+              }
+              className="w-full mt-16 lg:mt-32"
             >
               <div className="flex flex-col items-center w-full">
                 {isServer ? (
@@ -159,9 +166,9 @@ const BuyPage: NextPage<IBuyPage> = ({ language }) => {
                       <div className="font-semibold text-lg">Loading...</div>
                     }
                   >
-                    <div className="flex w-2/3 items-start">
+                    <div className="flex w-11/12 lg:w-2/3 items-start">
                       <ButtonBack
-                        style={{ marginTop: "15%" }}
+                        style={{ marginTop: width <= 768 ? "50%" : "15%" }}
                         className="px-4 focus:outline-none"
                       >
                         <img
@@ -172,7 +179,7 @@ const BuyPage: NextPage<IBuyPage> = ({ language }) => {
                       </ButtonBack>
                       <DynamicTestimonialCarousel />
                       <ButtonNext
-                        style={{ marginTop: "15%" }}
+                        style={{ marginTop: width <= 768 ? "50%" : "15%" }}
                         className="px-4 focus:outline-none"
                       >
                         <img src="/icon/chevron.svg" alt="" />

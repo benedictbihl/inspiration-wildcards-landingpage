@@ -34,6 +34,11 @@
 .flip-card-front img,
 .flip-card-back img {
   margin: 0 auto;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
 }
 
 .flip-card-back {
@@ -89,6 +94,7 @@
 .card-meta,
 .card-buttons {
   left: 10px;
+  touch-action: manipulation;
 }
 
 .card span {

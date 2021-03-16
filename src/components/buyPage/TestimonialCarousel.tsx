@@ -5,6 +5,7 @@ import { shuffle, chunked_array } from "../../util/helper";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import TestimonialComponent from "./Testimonial";
 import i18next from "i18next";
+import { useWindowSize } from "../../util/hooks";
 
 const shuffledTestimonials: Testimonial[] = shuffle(testimonials);
 
@@ -13,6 +14,9 @@ const TestimonialCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(
     carouselContext.state.currentSlide
   );
+  const { width } = useWindowSize();
+
+  console.log(width);
   useEffect(() => {
     function onChange() {
       setCurrentSlide(carouselContext.state.currentSlide);
@@ -21,8 +25,7 @@ const TestimonialCarousel = () => {
     return () => carouselContext.unsubscribe(onChange);
   }, [carouselContext]);
 
-  const slideContents = () => {
-    console.log(chunked_array(shuffledTestimonials, 3));
+  const slideContentsDesktop = () => {
     return chunked_array(shuffledTestimonials, 3).map((testimonials, index) => {
       {
         return (
@@ -48,9 +51,29 @@ const TestimonialCarousel = () => {
     });
   };
 
+  const slideContentsMobile = () => {
+    return shuffledTestimonials.map((testimonial, index) => {
+      return (
+        <Slide
+          key={index}
+          className="styled-carousel-slide__testimonials"
+          index={index}
+        >
+          <TestimonialComponent
+            className="w-full sm:w-2/3 mx-auto flex flex-col items-center justify-end"
+            key={index}
+            image={testimonial.image}
+            text={i18next.t(testimonial.text)}
+            job={i18next.t(testimonial.job)}
+          />
+        </Slide>
+      );
+    });
+  };
+
   return (
     <Slider className="max-w-screen w-full md:w-11/12 mx-auto mt-12 md:mt-0">
-      {slideContents()}
+      {width <= 768 ? slideContentsMobile() : slideContentsDesktop()}
     </Slider>
   );
 };

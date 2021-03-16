@@ -16,6 +16,13 @@ interface ILangIndex {
 const isServer = typeof window === "undefined";
 const LangIndex: NextPage<ILangIndex> = ({ language }) => {
   const [cardOnTop, setCardOnTop] = useState<number>(-1); //-1 for first render
+
+  const handleCardChange = () => {
+    cardOnTop === cards.length + 3 //include the sprinkled in unavailable cards in CardStack.tsx
+      ? setCardOnTop(0)
+      : setCardOnTop(cardOnTop + 1);
+  };
+
   return (
     <Layout
       showFooter={false}
@@ -50,7 +57,11 @@ const LangIndex: NextPage<ILangIndex> = ({ language }) => {
                   </div>
                 }
               >
-                <DynamicCardstack language={language} cardOnTop={cardOnTop} />
+                <DynamicCardstack
+                  onSwipeLeft={() => handleCardChange()}
+                  language={language}
+                  cardOnTop={cardOnTop}
+                />
               </Suspense>
             )}
 
@@ -75,11 +86,7 @@ const LangIndex: NextPage<ILangIndex> = ({ language }) => {
                 </Link>
                 <button
                   className="focus:outline-none text-xl xl:text-2xl font-semibold text-primary ml-1 px-4 md:px-8 py-1 border-2 border-accent rounded-full bg-accent hover:text-secondary"
-                  onClick={() => {
-                    cardOnTop === cards.length + 3 //include the sprinkled in unavailable cards in CardStack.tsx
-                      ? setCardOnTop(0)
-                      : setCardOnTop(cardOnTop + 1);
-                  }}
+                  onClick={() => handleCardChange()}
                 >
                   {i18next.t("index.nextBtn")}
                 </button>

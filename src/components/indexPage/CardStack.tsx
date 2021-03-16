@@ -3,12 +3,24 @@ import FlipCard from "./FlipCard";
 import i18next from "i18next";
 import { cards, cards_unavailable } from "../../util/cards";
 import { shuffle } from "../../util/helper";
+import { useSwipeable } from "react-swipeable";
+
 interface ICardStack {
   language: string;
   cardOnTop: number;
+  onSwipeLeft: () => void;
 }
 
-const CardStack: React.FC<ICardStack> = ({ language, cardOnTop }) => {
+const CardStack: React.FC<ICardStack> = ({
+  language,
+  cardOnTop,
+  onSwipeLeft
+}) => {
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => onSwipeLeft(),
+    trackMouse: true
+  });
+
   const initialRender = useRef(true);
   const cardRefs = useRef([]);
   cardRefs.current = [];
@@ -100,7 +112,10 @@ const CardStack: React.FC<ICardStack> = ({ language, cardOnTop }) => {
   }, [cardOnTop]);
 
   return (
-    <div className=" flex flex-col items-center justify-start pt-16 md:pt-28 relative ">
+    <div
+      {...swipeHandlers}
+      className=" flex flex-col items-center justify-start pt-16 md:pt-28 relative "
+    >
       <figure className="stack w-full mx-auto">
         {shuffledCards.map((card, index) => {
           return (

@@ -64,5 +64,45 @@ export const testimonials: Testimonial[] = [
     text: "buy.testimonials.testimonial_12",
     job: "buy.testimonials.testimonial_job_12",
     image: "/img/testimonials/12.png"
+  },
+  {
+    text: "buy.testimonials.testimonial_13",
+    job: "buy.testimonials.testimonial_job_13",
+    image: "/img/testimonials/13.png"
+  },
+  {
+    text: "buy.testimonials.testimonial_14",
+    job: "buy.testimonials.testimonial_job_14",
+    image: "/img/testimonials/13.png"
+  },
+  {
+    text: "buy.testimonials.testimonial_15",
+    job: "buy.testimonials.testimonial_job_15",
+    image: "/img/testimonials/14.png"
+  },
+  {
+    text: "buy.testimonials.testimonial_16",
+    job: "buy.testimonials.testimonial_job_16",
+    image: "/img/testimonials/14.png"
+  },
+  {
+    text: "buy.testimonials.testimonial_17",
+    job: "buy.testimonials.testimonial_job_17",
+    image: "/img/testimonials/14.png"
+  },
+  {
+    text: "buy.testimonials.testimonial_18",
+    job: "buy.testimonials.testimonial_job_18",
+    image: "/img/testimonials/14.png"
+  },
+  {
+    text: "buy.testimonials.testimonial_19",
+    job: "buy.testimonials.testimonial_job_19",
+    image: "/img/testimonials/14.png"
+  },
+  {
+    text: "buy.testimonials.testimonial_20",
+    job: "buy.testimonials.testimonial_job_20",
+    image: "/img/testimonials/14.png"
   }
 ];
