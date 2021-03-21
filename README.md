@@ -1,20 +1,18 @@
-# Next.js i18n starter for static pages
+# Inspiration Wild Cards Website
 
-Includes `i18next`, `i18next-browser-languagedetector` and `tailwindcss`.
-
-Clients will be directly redirected from `/` to `/[lang]` based on the detected language.
+This is the content shown on [inspirationwildcards.com](https://www.inspirationwildcards.com/). 
+Next.js SSG + Tailwind + Typescript.
 
 ## Installation
 
-Clone the repository and then run `npm run install`
+```bash
+npm install <-- install dependencies
 
-## Configuration
 
--   Set the languages and the default language `/src/i18n/config.js`
--   Locales are located in `/src/locales/`
+npm run dev <-- dev mode
+npm run export <-- creates production ready content in out folder
+```
 
-## Exoport Static Pages
 
-`npm run export`
-
-## TEST CHANGE
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
