@@ -16,7 +16,6 @@ const TestimonialCarousel = () => {
   );
   const { width } = useWindowSize();
 
-  console.log(width);
   useEffect(() => {
     function onChange() {
       setCurrentSlide(carouselContext.state.currentSlide);
