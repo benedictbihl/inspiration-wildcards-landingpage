@@ -5,7 +5,7 @@ import i18next from "i18next";
 
 // import { getSortedLangsData } from "../lib/lang";
 
-export default function Home({ allLangsData }): null {
+export default function Home(): null {
   const router = useRouter();
 
   useEffect(() => {

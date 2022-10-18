@@ -4,6 +4,7 @@ import "pure-react-carousel/dist/react-carousel.es.css";
 
 const Carousel: React.FC = () => {
   const carouselContext = useContext(CarouselContext);
+  //eslint-disable-next-line
   const [currentSlide, setCurrentSlide] = useState(
     carouselContext.state.currentSlide
   );

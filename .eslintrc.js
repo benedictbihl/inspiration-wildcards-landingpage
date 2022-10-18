@@ -10,18 +10,22 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     // 'plugin:jsx-a11y/recommended',
-    
-    // Prettier plugin and recommended rules
-    'prettier/@typescript-eslint',
-    'plugin:prettier/recommended'
+    "plugin:prettier/recommended",
+    'plugin:@next/next/recommended',
+    "@next/eslint-plugin-next"
   ],
+  plugins: ["prettier"],
   rules: {
-    
+
     // Include .prettierrc.js rules
-    'prettier/prettier': [ 
-      "error", {}, { "usePrettierrc": true }
+    "prettier/prettier": [
+      0,
+      {},
+      {
+        usePrettierrc: true,
+      },
     ],
-   '@typescript-eslint/ban-ts-comment': 'off',
+    '@typescript-eslint/ban-ts-comment': 'off',
     'react/prop-types': 'off',
     'react/display-name': 'off',
     'jsx-a11y/anchor-is-valid': 'off',

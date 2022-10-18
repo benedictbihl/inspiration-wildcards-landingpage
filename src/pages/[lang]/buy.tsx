@@ -1,5 +1,5 @@
 import { NextPage, GetStaticPaths, GetStaticProps } from "next";
-import React, { Suspense } from "react";
+import React, { Suspense, useState, useEffect } from "react";
 import Layout from "../../components/Layout";
 import { getAllLanguageSlugs, getLanguage } from "../../lib/lang";
 import i18next from "i18next";
@@ -13,10 +13,15 @@ const DynamicTestimonialCarousel = React.lazy(() =>
 interface IBuyPage {
   language: string;
 }
-const isServer = typeof window === "undefined";
 
 const BuyPage: NextPage<IBuyPage> = ({ language }) => {
   const { width } = useWindowSize();
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   return (
     <Layout
       showFooter={false}
@@ -177,7 +182,7 @@ const BuyPage: NextPage<IBuyPage> = ({ language }) => {
               className="w-full mt-16 lg:mt-32"
             >
               <div className="flex flex-col items-center w-full">
-                {isServer ? (
+                {!isClient ? (
                   <div>ERROR</div>
                 ) : (
                   <Suspense

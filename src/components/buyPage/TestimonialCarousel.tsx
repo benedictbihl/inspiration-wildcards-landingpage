@@ -11,6 +11,7 @@ const shuffledTestimonials: Testimonial[] = shuffle(testimonials);
 
 const TestimonialCarousel = () => {
   const carouselContext = useContext(CarouselContext);
+  //eslint-disable-next-line
   const [currentSlide, setCurrentSlide] = useState(
     carouselContext.state.currentSlide
   );

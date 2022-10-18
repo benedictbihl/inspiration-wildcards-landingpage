@@ -1,4 +1,4 @@
-import React, { useState, Suspense } from "react";
+import React, { useState, Suspense, useEffect } from "react";
 import { NextPage, GetStaticPaths, GetStaticProps } from "next";
 import Layout from "../../components/Layout";
 import i18next from "i18next";
@@ -14,15 +14,18 @@ interface ILangIndex {
   language: string;
 }
 
-const isServer = typeof window === "undefined";
 const LangIndex: NextPage<ILangIndex> = ({ language }) => {
   const [cardOnTop, setCardOnTop] = useState<number>(-1); //-1 for first render
-
+  const [isClient, setIsClient] = useState(false);
   const handleCardChange = () => {
     cardOnTop === cards.length + 3 //include the sprinkled in unavailable cards in CardStack.tsx
       ? setCardOnTop(0)
       : setCardOnTop(cardOnTop + 1);
   };
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   return (
     <Layout
@@ -34,7 +37,7 @@ const LangIndex: NextPage<ILangIndex> = ({ language }) => {
       <section className="w-full flex flex-col items-center h-screen">
         <div className="w-full h-screen flex flex-col justify-between">
           <div>
-            {isServer ? (
+            {!isClient ? (
               <div>ERROR</div>
             ) : (
               <Suspense

@@ -79,7 +79,7 @@ const CardStack: React.FC<ICardStack> = ({
       initialRender.current = false;
     } else {
       if (cardRefs.current.length > 0) {
-        cardRefs.current.map((card, index) => {
+        cardRefs.current.map(card => {
           card.style.animationName = "";
           const currentZIndex = parseInt(card.style.zIndex);
           const currentPos = parseInt(card.style.left); //used for left & top
