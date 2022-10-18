@@ -6,6 +6,7 @@ import i18next from "i18next";
 import { CarouselProvider, ButtonBack, ButtonNext } from "pure-react-carousel";
 import { testimonials } from "../../util/testimonials";
 import { useWindowSize } from "../../util/hooks";
+import Footer from "../../components/Footer";
 const DynamicTestimonialCarousel = React.lazy(() =>
   import("../../components/buyPage/TestimonialCarousel")
 );
@@ -84,6 +85,24 @@ const BuyPage: NextPage<IBuyPage> = ({ language }) => {
                       href={i18next.t("buy.GOOGLE_link_2_EN")}
                     >
                       <img src="/img/button_google_en2.png"></img>
+                    </a>
+                  </p>
+                  <p className="styled-buy-btn">
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href={i18next.t("buy.DECKIBLE_ANDROID_EN")}
+                    >
+                      <img src="/img/button_DeckibleGoogle.png"></img>
+                    </a>
+                  </p>
+                  <p className="styled-buy-btn">
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href={i18next.t("buy.DECKIBLE_IOS_EN")}
+                    >
+                      <img src="/img/button_DeckibleApple.png"></img>
                     </a>
                   </p>
                 </div>
@@ -190,11 +209,7 @@ const BuyPage: NextPage<IBuyPage> = ({ language }) => {
               </div>
             </CarouselProvider>
           </div>
-          <footer className="w-full bottom-0 flex justify-center pb-6 pt-10">
-            <p className="mx-auto text-center">
-              <span className="text-secondary">©2019-2021 Jens Mühlstedt</span>
-            </p>
-          </footer>
+          <Footer />
         </div>
       </section>
     </Layout>

@@ -3,6 +3,7 @@ import Head from "next/head";
 import i18next from "i18next";
 import Header from "./Header";
 import { motion } from "framer-motion";
+import Footer from "./Footer";
 
 interface ILayout {
   title: string;
@@ -49,13 +50,7 @@ const Layout: React.FC<ILayout> = ({
           <main>{children}</main>
         </motion.div>
       </motion.div>
-      {showFooter && (
-        <footer className="w-full bottom-0 flex justify-center pb-6 pt-10">
-          <p className="mx-auto text-center">
-            <span className="text-secondary"> ©2019-2021 Jens Mühlstedt</span>
-          </p>
-        </footer>
-      )}
+      {showFooter && <Footer />}
     </>
   );
 };

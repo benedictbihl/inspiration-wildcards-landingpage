@@ -5,6 +5,7 @@ import i18next from "i18next";
 import { getAllLanguageSlugs, getLanguage } from "../../lib/lang";
 import Link from "next/link";
 import { cards } from "../../util/cards";
+import Footer from "../../components/Footer";
 
 const DynamicCardstack = React.lazy(() =>
   import("../../components/indexPage/CardStack")
@@ -93,11 +94,7 @@ const LangIndex: NextPage<ILangIndex> = ({ language }) => {
               </div>
             </div>
           </div>
-          <footer className="w-full bottom-0 flex justify-center pb-6 pt-10">
-            <p className="mx-auto text-center">
-              <span className="text-secondary">©2019-2021 Jens Mühlstedt</span>
-            </p>
-          </footer>
+          <Footer />
         </div>
       </section>
     </Layout>

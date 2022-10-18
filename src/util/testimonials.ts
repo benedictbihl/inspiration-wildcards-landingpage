@@ -114,5 +114,10 @@ export const testimonials: Testimonial[] = [
     text: "buy.testimonials.testimonial_22",
     job: "buy.testimonials.testimonial_job_22",
     image: "/img/testimonials/16.png"
+  },
+  {
+    text: "buy.testimonials.testimonial_23",
+    job: "buy.testimonials.testimonial_job_23",
+    image: "/img/testimonials/14.png"
   }
 ];

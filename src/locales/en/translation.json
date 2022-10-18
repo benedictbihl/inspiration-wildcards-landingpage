@@ -41,8 +41,8 @@
     "Answer3": "You can read the article mentioned above ('further knowledge') or read one of the numerous good books out there about topics like design thinking, User Experience / UX or innovation management.",
     "Question4": "Can I get more than the 50 cards?",
     "Answer4": "Not yet. Maybe in one possible future there will be updated versions. If you have a request or cards you miss or any other idea, please write to info@inspirationwildcards.com.",
-    "Question5": "Will there be a full online version of the card set?",
-    "Answer5": "Well, if you provide the money to implement a website user management system, maybe."
+    "Question5": "Is there a full online version of the card set?",
+    "Answer5": "We are working together with <a style='text-decoration: underline' target='_blank' rel='noreferrer noopen' href='https://www.deckible.com/'>https://www.deckible.com/</a>, they provide mobile apps for iOS and Android, where the deck is available inside."
   },
   "index": {
     "buyBtn": "buy card set",
@@ -66,6 +66,8 @@
     "GOOGLE_link_EN": "https://www.google.com/search?q=ISBN+978-3-8325-5179-7",
     "GOOGLE_link_2_EN": "https://www.google.com/search?q=inspiration+wild+cards",
     "GOOGLE_EN": "Google-Search for the ISBN",
+    "DECKIBLE_ANDROID_EN": "https://play.google.com/store/apps/details?id=mobile.deckible.com",
+    "DECKIBLE_IOS_EN": "https://apps.apple.com/us/app/deckible/id1594876295",
     "isbn_DE": "ISBN 978-3-8325-5178-0",
     "LOGOS_link_DE": "https://www.logos-verlag.de/cgi-bin/engbuchmid?isbn=5178&lng=deu&id=",
     "LOGOS_DE": "beim Logos Verlag",
@@ -118,7 +120,9 @@
       "testimonial_21": "Mega nice!! Ich freue mich riesig sie asap auszuprobieren!",
       "testimonial_job_21": "PhD UX Researcher, Germany",
       "testimonial_22": "Einfach genial! Die Karten sind fester Bestandteil unseres New Work Coaching Haushalts.",
-      "testimonial_job_22": "UX/CX Expert & Head of Design, Germany"
+      "testimonial_job_22": "UX/CX Expert & Head of Design, Germany",
+      "testimonial_23": "THE Tool For New Ideas - amazingly simple to use. amazing results.",
+      "testimonial_job_23": "Review, Barnes & Noble"
     }
   }
 }

@@ -3,6 +3,7 @@ import Layout from "../../components/Layout";
 import { getAllLanguageSlugs, getLanguage } from "../../lib/lang";
 import { NextPage, GetStaticPaths, GetStaticProps } from "next";
 import i18next from "i18next";
+import Footer from "../../components/Footer";
 
 interface IContactAndImprintPage {
   language: string;
@@ -23,7 +24,7 @@ const ContactAndImprintPage: NextPage<IContactAndImprintPage> = ({
           <h1 className="text-accent font-semibold text-4xl">Impressum</h1>
           <br></br>
           <p>
-            ©2019-2021 Jens M&uuml;hlstedt
+            Jens M&uuml;hlstedt
             <br />
             Zenettistr. 39
             <br />
@@ -57,11 +58,7 @@ const ContactAndImprintPage: NextPage<IContactAndImprintPage> = ({
             Popup-Fragen nicht zu benötigen. Geht auch ohne.
           </p>
         </div>
-        <footer className="w-full bottom-0 flex justify-center pb-6 pt-10">
-          <p className="mx-auto text-center">
-            <span className="text-secondary">©2019-2021 Jens Mühlstedt</span>
-          </p>
-        </footer>
+        <Footer />
       </section>
     </Layout>
   );
